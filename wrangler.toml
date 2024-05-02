@@ -13,6 +13,15 @@ custom_domain = true
 pattern = "shopee.co.id.my1.dianastore.xyz"
 custom_domain = true
 
+[[routes]]
+pattern = "my1.dianastore.xyz"
+zone_name = "dianastore.xyz"
+
+[[routes]]
+pattern = "shopee.co.id.my1.dianastore.xyz"
+zone_name = "dianastore.xyz"
+
+
 [vars]
 # UUID = "d342d11e-d424-4583-b36e-524ab1f0afa5"
 PROXYIP = "103.75.188.126"
