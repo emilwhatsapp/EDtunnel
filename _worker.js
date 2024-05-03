@@ -739,7 +739,24 @@ ${วเลสSec}
 ---------------------------------------------------------------
 Config Openclash
 ---------------------------------------------------------------
-${opclash}
+<pre id="code">
+- name: VLESS BODONG
+  server: ${hostName}
+  port: 443
+  type: vless
+  uuid: ${userID}
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: ${hostName}
+  network: ws
+  ws-opts:
+    path: /vless-bodong
+    headers:
+      Host: ${hostName}
+  udp: true
+</pre>
+<button onclick='copyclash()'><i class="fa fa-clipboard"></i> Copy Openclash</button>
 ---------------------------------------------------------------`;
 	}).join('\n');
 	const sublink = `https://${hostName}/sub/${userIDArray[0]}?format=clash`
@@ -837,6 +854,22 @@ ${opclash}
 		});
 	}
   </script>
+  
+  <script>
+function copyclash() {
+  const code = document.getElementById('code').innerText;
+  
+  navigator.clipboard.writeText(code)
+    .then(() => {
+      alert('Kode berhasil disalin!');
+    })
+    .catch(err => {
+      console.error('Gagal menyalin kode:', err);
+      alert('Gagal menyalin kode.');
+    });
+}
+</script>
+
   </html>`;
 }
 
