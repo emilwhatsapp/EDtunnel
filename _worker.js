@@ -914,4 +914,4 @@ function สร้างวเลสSub(ไอดีผู้ใช้_เส้
 	return ผลลัพธ์.join('\n');
 }
 
-const cn_hostnames = [${hostName}%2F${userID}];
+const cn_hostnames = `[${hostName}/${userID}];`;
