@@ -710,7 +710,7 @@ function getวเลสConfig(userIDs, hostName) {
 	const output = userIDArray.map((userID) => {
 		const วเลสMain = atob(pt) + '://' + userID + atob(at) + hostName + commonUrlPart;
 		const วเลสSec = atob(pt) + '://' + userID + atob(at) + hostName + commonUrlPartt;
-		const opclash = '  
+		let opclash = '  
   - name: VLESS BODONG
     server: ${hostName}
     port: 443
