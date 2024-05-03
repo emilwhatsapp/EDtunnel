@@ -797,7 +797,7 @@ ${opclash}
 	  background-color: #f0f0f0;
 	  color: #333;
 	  padding: 10px;
-	  max-width: 600px; /* Menetapkan lebar maksimum untuk body */
+	  max-width: 900px; /* Menetapkan lebar maksimum untuk body */
         margin-left: auto;
         margin-right: auto;
 	}
