@@ -741,22 +741,7 @@ ${วเลสSec}
 Config Openclash
 ---------------------------------------------------------------
 ${opclash}
-<button onclick='copyToClipboard("
-  - name: VLESS BODONG
-    server: ${hostName}
-    port: 443
-    type: vless
-    uuid: ${userID}
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: ${hostName}
-    network: ws
-    ws-opts:
-      path: /vless-bodong
-      headers:
-        Host: ${hostName}
-    udp: true")'><i class="fa fa-clipboard"></i> Copy openclash</button>
+<button onclick='copyToClipboard("hallobang")'><i class="fa fa-clipboard"></i> Copy openclash</button>
 ---------------------------------------------------------------`;
 	}).join('\n');
 	const sublink = `https://${hostName}/sub/${userIDArray[0]}?format=clash`
