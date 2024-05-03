@@ -725,8 +725,8 @@ function getวเลสConfig(userIDs, hostName) {
       headers:
         Host: ${hostName}
     udp: true`;
-}    
-		return `<center><h2>VLESS CLOUDFLARE FREE</h2>${hashSeparator}</center>
+		return `
+		<center><h2>VLESS CLOUDFLARE FREE</h2>${hashSeparator}</center>
 =========================
 × Vless port 443
 =========================
@@ -741,9 +741,9 @@ ${วเลสSec}
 × Config Openclash
 =========================
 ${opclash}
+<button onclick='copyclash()'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
 =========================
-<button onclick='copyclash()'><i class="fa fa-clipboard"></i> Copy Openclash</button>
-  <div hidden id="code">
+<div hidden id="code">
   - name: VLESS BODONG
     server: ${hostName}
     port: 443
