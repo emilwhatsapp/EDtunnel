@@ -711,6 +711,22 @@ function getวเลสConfig(userIDs, hostName) {
 	const output = userIDArray.map((userID) => {
 		const วเลสMain = atob(pt) + '://' + userID + atob(at) + hostName + commonUrlPart;
 		const วเลสSec = atob(pt) + '://' + userID + atob(at) + hostName + commonUrlPartt;
+		const opclash = `
+  - name: VLESS DO
+    server: ${hostName}
+    port: 443
+    type: vless
+    uuid: ${userID}
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: ${hostName}
+    network: ws
+    ws-opts:
+      path: /vless-bodong
+      headers:
+        Host: ${hostName}
+    udp: true`;
     
 		return `<center>VLESS CLOUDFLARE FREE</center>${hashSeparator}\nVless port 443
 ---------------------------------------------------------------
@@ -724,21 +740,24 @@ ${วเลสSec}
 ---------------------------------------------------------------
 Config Openclash
 ---------------------------------------------------------------
-- name: VLESS BODONG
-  server: ${hostName}
-  port: 443
-  type: vless
-  uuid: ${userID}
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: ${hostName}
-  network: ws
-  ws-opts:
-    path: /vless-bodong
-    headers:
-      Host: ${hostName}
-  udp: true
+${opclash}
+  <div hidden id="code">
+  - name: VLESS DO
+    server: ${hostName}
+    port: 443
+    type: vless
+    uuid: ${userID}
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: ${hostName}
+    network: ws
+    ws-opts:
+      path: /vless-bodong
+      headers:
+        Host: ${hostName}
+    udp: true
+  </div>  
 <button onclick='copyclash()'><i class="fa fa-clipboard"></i> Copy Openclash</button>
 ---------------------------------------------------------------`;
 	}).join('\n');
@@ -841,23 +860,7 @@ Config Openclash
   
   <script>
 function copyclash() {
-  const code = "
-- name: VLESS BODONG
-  server: tes.nihbodong.workers.dev
-  port: 443
-  type: vless
-  uuid: dfc3ad71-4ab8-424e-b5f7-965d18153ccb
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: tes.nihbodong.workers.dev
-  network: ws
-  ws-opts:
-    path: /vless-bodong
-    headers:
-      Host: tes.nihbodong.workers.dev
-  udp: true";
-
+  const code = document.getElementById('code').innerText;
   
   navigator.clipboard.writeText(code)
     .then(() => {
