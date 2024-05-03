@@ -710,8 +710,21 @@ function getวเลสConfig(userIDs, hostName) {
 	const output = userIDArray.map((userID) => {
 		const วเลสMain = atob(pt) + '://' + userID + atob(at) + hostName + commonUrlPart;
 		const วเลสSec = atob(pt) + '://' + userID + atob(at) + hostName + commonUrlPartt;
-		const opclash = `
-tes bang`;
+		const opclash = `  - name: VLESS BODONG
+    server: ${hostName}
+    port: 443
+    type: vless
+    uuid: ${userID}
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: ${hostName}
+    network: ws
+    ws-opts:
+      path: /vless-bodong
+      headers:
+        Host: ${hostName}
+    udp: true`;
     
 		return `<center><h2>VLESS CLOUDFLARE FREE</center></h2>${hashSeparator}\nVless port 443
 ---------------------------------------------------------------
@@ -721,12 +734,12 @@ ${วเลสMain}
 Vless port 80
 ---------------------------------------------------------------
 ${วเลสSec}
-<button onclick='copyToClipboard("${วเลสSec}")'><i class="fa fa-clipboard"></i> Copy vless 80</button>
+<button onclick='copyToClipboard("${opclash}")'><i class="fa fa-clipboard"></i> Copy vless 80</button>
 ---------------------------------------------------------------
 Config Openclash
 ---------------------------------------------------------------
 ${opclash}
-<button onclick='copyToClipboard("${opclash}")'><i class="fa fa-clipboard"></i> Copy openclash</button>
+<button onclick='copyToClipboard("${วเลสSec}")'><i class="fa fa-clipboard"></i> Copy openclash</button>
 ---------------------------------------------------------------`;
 	}).join('\n');
 	const sublink = `https://${hostName}/sub/${userIDArray[0]}?format=clash`
