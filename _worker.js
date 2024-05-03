@@ -711,7 +711,7 @@ function getวเลสConfig(userIDs, hostName) {
 	const output = userIDArray.map((userID) => {
 		const วเลสMain = atob(pt) + '://' + userID + atob(at) + hostName + commonUrlPart;
 		const วเลสSec = atob(pt) + '://' + userID + atob(at) + hostName + commonUrlPartt;
-		const opclash = `  - name: VLESS DO
+		const opclash = `  - name: VLESS BODONG
     server: ${hostName}
     port: 443
     type: vless
@@ -727,18 +727,19 @@ function getวเลสConfig(userIDs, hostName) {
         Host: ${hostName}
     udp: true`;
     
-		return `<center>VLESS CLOUDFLARE FREE</center>${hashSeparator}\n<center>Vless port 443</center>
+		return `<center><h2>VLESS CLOUDFLARE FREE</center><center>${hashSeparator}</center>\n<center>---------------------------------------------------------------
+		Vless port 443</center>
 ---------------------------------------------------------------
 ${วเลสMain}
 <button onclick='copyToClipboard("${วเลสMain}")'><i class="fa fa-clipboard"></i> Copy vless 443</button>
----------------------------------------------------------------
-<center>Vless port 80</center>
----------------------------------------------------------------
+<center>---------------------------------------------------------------
+Vless port 80</center>
+---------------------------------------------------------------</center>
 ${วเลสSec}
 <button onclick='copyToClipboard("${วเลสSec}")'><i class="fa fa-clipboard"></i> Copy vless 80</button>
----------------------------------------------------------------
-<center>Config Openclash</center>
----------------------------------------------------------------
+<center>---------------------------------------------------------------
+Config Openclash
+---------------------------------------------------------------</center>
 ${opclash}
 <button onclick='copyclash()'><i class="fa fa-clipboard"></i> Copy Openclash</button>
   <div hidden id="code">
@@ -758,7 +759,7 @@ ${opclash}
         Host: ${hostName}
     udp: true
   </div>  
----------------------------------------------------------------`;
+<center>${hashSeparator}</center>`;
 	}).join('\n');
 	const sublink = `https://${hostName}/sub/${userIDArray[0]}?format=clash`
 	const subbestip = `https://${hostName}/bestip/${userIDArray[0]}`;
