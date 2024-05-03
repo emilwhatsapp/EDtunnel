@@ -710,7 +710,7 @@ function getวเลสConfig(userIDs, hostName) {
 	const output = userIDArray.map((userID) => {
 		const วเลสMain = atob(pt) + '://' + userID + atob(at) + hostName + commonUrlPart;
 		const วเลสSec = atob(pt) + '://' + userID + atob(at) + hostName + commonUrlPartt;
-		let opclash = '  
+		const opclash = `
   - name: VLESS BODONG
     server: ${hostName}
     port: 443
@@ -725,7 +725,7 @@ function getวเลสConfig(userIDs, hostName) {
       path: /vless-bodong
       headers:
         Host: ${hostName}
-    udp: true';
+    udp: true`;
     
 		return `<center><h2>VLESS CLOUDFLARE FREE</center></h2>${hashSeparator}\nVless port 443
 ---------------------------------------------------------------
