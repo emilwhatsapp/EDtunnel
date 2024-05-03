@@ -13,7 +13,7 @@ let พร็อกซีไอพี = พร็อกซีไอพีs[Math.
 // let พร็อกซีไอพี = 'cdn.xn--b6gac.eu.org';
 // ipv6 พร็อกซีไอพี example remove comment to use
 // let พร็อกซีไอพี = "[2a01:4f8:c2c:123f:64:5:6810:c55a]"
-let URLDIRECT = 't.me/trust_bodong';
+let URLDIRECT = 'google.com';
 let dohURL = 'https://dns.adguard.com/dns-query';
 
 if (!isValidUUID(userID)) {
@@ -915,4 +915,4 @@ function สร้างวเลสSub(ไอดีผู้ใช้_เส้
 	return ผลลัพธ์.join('\n');
 }
 
-const cn_hostnames = [linkDirect];
+const cn_hostnames = [URLDIRECT];
