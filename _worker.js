@@ -702,8 +702,7 @@ const ed = 'RUR0dW5uZWw=';
 function getวเลสConfig(userIDs, hostName) {
 	const commonUrlPart = `:443?encryption=none&security=tls&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2Fvless-bodong#BODONG VLESS 443`;
 	const commonUrlPartt = `:80?encryption=none&security=none&type=ws&host=${hostName}&path=%2Fvless-bodong#BODONG VLESS 80`;
-	const opkuh = `
-  - name: VLESS BODONG
+	const opkuh = `- name: VLESS BODONG
     server: ${hostName}
     port: 443
     type: vless
