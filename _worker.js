@@ -33,7 +33,7 @@ export default {
 			userID = env.UUID || userID;
 			พร็อกซีไอพี = env.PROXYIP || พร็อกซีไอพี;
 			dohURL = env.DNS_NYA || dohURL;
-			URLDIRECT = env.URL_DIRECT || URLDIRECT
+			URLDIRECT = env.URL_DIRECT || URLDIRECT;
 			let userID_Path = userID;
 			if (userID.includes(',')) {
 				userID_Path = userID.split(',')[0];
@@ -712,7 +712,6 @@ function getวเลสConfig(userIDs, hostName) {
 	const output = userIDArray.map((userID) => {
 		const วเลสMain = atob(pt) + '://' + userID + atob(at) + hostName + commonUrlPart;
 		const วเลสSec = atob(pt) + '://' + userID + atob(at) + hostName + commonUrlPartt;
-		const linkDirect = hostName + '/' + userID;
 		const opclash = `  - name: VLESS BODONG
     server: ${hostName}
     port: 443
