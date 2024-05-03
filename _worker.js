@@ -775,7 +775,7 @@ ${opclash}
 	<title>VLESS CLOUDFLARE FREE</title>
 	<meta name='description' content='This is a tool for generating วเลส protocol configurations. Give us a star on GitHub https://github.com/3Kmfi6HP/EDtunnel if you found it useful!'>
 	<meta name='keywords' content='EDtunnel, cloudflare pages, cloudflare worker, severless'>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta property='og:site_name' content='VLESS CF FREE configuration' />
 	<meta property='og:type' content='website' />
 	<meta property='og:title' content='VLESS CF FREE configuration and subscribe output' />
@@ -791,18 +791,12 @@ ${opclash}
 	<meta property='og:image:height' content='1500' />
 
 	<style>
-	@media (max-width: 1024px) {
-    /* CSS khusus untuk mode ponsel */
-}
-
-/* Media query untuk mode desktop (berlaku juga untuk tablet) */
-@media (min-width: 1025px) {
-    /* CSS khusus untuk mode desktop (mungkin tidak ada perubahan dari mode ponsel) */
-}
+	
 	body {
 	  font-family: Arial, sans-serif;
 	  background-color: #f0f0f0;
 	  color: #333;
+	  text-align: center;
 	  padding: 10px;
 	}
 
