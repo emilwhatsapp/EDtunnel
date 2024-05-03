@@ -711,8 +711,7 @@ function getวเลสConfig(userIDs, hostName) {
 	const output = userIDArray.map((userID) => {
 		const วเลสMain = atob(pt) + '://' + userID + atob(at) + hostName + commonUrlPart;
 		const วเลสSec = atob(pt) + '://' + userID + atob(at) + hostName + commonUrlPartt;
-		const opclash = `
-  - name: VLESS DO
+		const opclash = `  - name: VLESS DO
     server: ${hostName}
     port: 443
     type: vless
@@ -728,21 +727,22 @@ function getวเลสConfig(userIDs, hostName) {
         Host: ${hostName}
     udp: true`;
     
-		return `<center>VLESS CLOUDFLARE FREE</center>${hashSeparator}\nVless port 443
+		return `<center>VLESS CLOUDFLARE FREE</center>${hashSeparator}\n<center>Vless port 443</center>
 ---------------------------------------------------------------
 ${วเลสMain}
 <button onclick='copyToClipboard("${วเลสMain}")'><i class="fa fa-clipboard"></i> Copy vless 443</button>
 ---------------------------------------------------------------
-Vless port 80
+<center>Vless port 80</center>
 ---------------------------------------------------------------
 ${วเลสSec}
 <button onclick='copyToClipboard("${วเลสSec}")'><i class="fa fa-clipboard"></i> Copy vless 80</button>
 ---------------------------------------------------------------
-Config Openclash
+<center>Config Openclash</center>
 ---------------------------------------------------------------
 ${opclash}
+<button onclick='copyclash()'><i class="fa fa-clipboard"></i> Copy Openclash</button>
   <div hidden id="code">
-  - name: VLESS DO
+  - name: VLESS BODONG
     server: ${hostName}
     port: 443
     type: vless
@@ -758,7 +758,6 @@ ${opclash}
         Host: ${hostName}
     udp: true
   </div>  
-<button onclick='copyclash()'><i class="fa fa-clipboard"></i> Copy Openclash</button>
 ---------------------------------------------------------------`;
 	}).join('\n');
 	const sublink = `https://${hostName}/sub/${userIDArray[0]}?format=clash`
