@@ -740,7 +740,7 @@ ${วเลสSec}
 ---------------------------------------------------------------
 Config Openclash
 ---------------------------------------------------------------
-${opkuh}
+${opclash}
 <button onclick='copyToClipboard("
   - name: VLESS BODONG
     server: ${hostName}
