@@ -739,7 +739,7 @@ ${วเลสSec}
 ---------------------------------------------------------------
 Config Openclash
 ---------------------------------------------------------------
-<pre id="code">
+<div id="code">
 - name: VLESS BODONG
   server: ${hostName}
   port: 443
@@ -755,7 +755,7 @@ Config Openclash
     headers:
       Host: ${hostName}
   udp: true
-</pre>
+</div>
 <button onclick='copyclash()'><i class="fa fa-clipboard"></i> Copy Openclash</button>
 ---------------------------------------------------------------`;
 	}).join('\n');
