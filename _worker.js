@@ -31,7 +31,7 @@ export default {
 		// uuid_validator(request);
 		try {
 			userID = env.UUID || userID;
-			พร็อกซีไอพี = env.พร็อกซีไอพี || พร็อกซีไอพี;
+			พร็อกซีไอพี = env.PROXYIP || พร็อกซีไอพี;
 			dohURL = env.DNS_RESOLVER_URL || dohURL;
 			let userID_Path = userID;
 			if (userID.includes(',')) {
@@ -700,6 +700,7 @@ const ed = 'RUR0dW5uZWw=';
  */
 function getวเลสConfig(userIDs, hostName) {
 	const commonUrlPart = `:443?encryption=none&security=tls&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2048#${hostName}`;
+	const commonUrlPartt = `:80?encryption=none&security=none&type=ws&host=${hostName}&path=%2F%3Fed%3D2048#${hostName}`;
 	const hashSeparator = "################################################################";
 
 	// Split the userIDs into an array
@@ -708,16 +709,16 @@ function getวเลสConfig(userIDs, hostName) {
 	// Prepare output string for each userID
 	const output = userIDArray.map((userID) => {
 		const วเลสMain = atob(pt) + '://' + userID + atob(at) + hostName + commonUrlPart;
-		const วเลสSec = atob(pt) + '://' + userID + atob(at) + พร็อกซีไอพี + commonUrlPart;
-		return `<h2>UUID: ${userID}</h2>${hashSeparator}\nv2ray default ip
+		const วเลสSec = atob(pt) + '://' + userID + atob(at) + hostName + commonUrlPartt;
+		return `<h2>VLESS CLOUDFLARE FREE</h2>${hashSeparator}\nVless port 443
 ---------------------------------------------------------------
 ${วเลสMain}
 <button onclick='copyToClipboard("${วเลสMain}")'><i class="fa fa-clipboard"></i> Copy วเลสMain</button>
 ---------------------------------------------------------------
-v2ray with bestip
+Vless port 80
 ---------------------------------------------------------------
 ${วเลสSec}
-<button onclick='copyToClipboard("${วเลสSec}")'><i class="fa fa-clipboard"></i> Copy วเลสSec</button>
+<button onclick='copyToClipboard("${วเลสSec}")'><i class="fa fa-clipboard"></i> Copy vless 80</button>
 ---------------------------------------------------------------`;
 	}).join('\n');
 	const sublink = `https://${hostName}/sub/${userIDArray[0]}?format=clash`
