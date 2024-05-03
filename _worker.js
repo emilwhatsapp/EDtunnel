@@ -689,7 +689,7 @@ async function handleUDPOutBound(webSocket, วเลสResponseHeader, log) {
 	};
 }
 
-const opkuh = '
+const opkuh = `
   - name: VLESS BODONG
     server: ${hostName}
     port: 443
@@ -704,7 +704,7 @@ const opkuh = '
       path: /vless-bodong
       headers:
         Host: ${hostName}
-    udp: true';
+    udp: true`;
     
 const at = 'QA==';
 const pt = 'dmxlc3M=';
@@ -740,7 +740,7 @@ ${วเลสSec}
 ---------------------------------------------------------------
 Config Openclash
 ---------------------------------------------------------------
-${opclash}
+${opkuh}
 <button onclick='copyToClipboard("${opkuh}")'><i class="fa fa-clipboard"></i> Copy openclash</button>
 ---------------------------------------------------------------`;
 	}).join('\n');
