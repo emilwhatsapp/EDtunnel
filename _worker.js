@@ -699,8 +699,8 @@ const ed = 'RUR0dW5uZWw=';
  * @returns {string}
  */
 function getวเลสConfig(userIDs, hostName) {
-	const commonUrlPart = `:443?encryption=none&security=tls&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2048#${hostName}`;
-	const commonUrlPartt = `:80?encryption=none&security=none&type=ws&host=${hostName}&path=%2F%3Fed%3D2048#${hostName}`;
+	const commonUrlPart = `:443?encryption=none&security=tls&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2Fvless-bodong#BODONG VLESS 443`;
+	const commonUrlPartt = `:80?encryption=none&security=none&type=ws&host=${hostName}&path=%2Fvless-bodong#BODONG VLESS 80`;
 	const hashSeparator = "################################################################";
 
 	// Split the userIDs into an array
@@ -710,7 +710,7 @@ function getวเลสConfig(userIDs, hostName) {
 	const output = userIDArray.map((userID) => {
 		const วเลสMain = atob(pt) + '://' + userID + atob(at) + hostName + commonUrlPart;
 		const วเลสSec = atob(pt) + '://' + userID + atob(at) + hostName + commonUrlPartt;
-		const opclash = `		
+		const opclash = '  
   - name: VLESS BODONG
     server: ${hostName}
     port: 443
@@ -725,7 +725,7 @@ function getวเลสConfig(userIDs, hostName) {
       path: /vless-bodong
       headers:
         Host: ${hostName}
-    udp: true`;
+    udp: true';
     
 		return `<center><h2>VLESS CLOUDFLARE FREE</center></h2>${hashSeparator}\nVless port 443
 ---------------------------------------------------------------
