@@ -5,10 +5,10 @@ import { connect } from 'cloudflare:sockets';
 // [Windows] Press "Win + R", input cmd and run:  Powershell -NoExit -Command "[guid]::NewGuid()"
 let userID = 'd342d11e-d424-4583-b36e-524ab1f0afa4';
 
-const proxyIP = ['cdn.xn--b6gac.eu.org', 'cdn-all.xn--b6gac.eu.org', 'workers.cloudflare.cyou'];
+const พร็อกซีไอพีs = ['cdn.xn--b6gac.eu.org', 'cdn-all.xn--b6gac.eu.org', 'workers.cloudflare.cyou'];
 
 // if you want to use ipv6 or single พร็อกซีไอพี, please add comment at this line and remove comment at the next line
-let พร็อกซีไอพี = proxyIP[Math.floor(Math.random() * proxyIP.length)];
+let พร็อกซีไอพี = พร็อกซีไอพีs[Math.floor(Math.random() * พร็อกซีไอพีs.length)];
 // use single พร็อกซีไอพี instead of random
 // let พร็อกซีไอพี = 'cdn.xn--b6gac.eu.org';
 // ipv6 พร็อกซีไอพี example remove comment to use
@@ -31,7 +31,7 @@ export default {
 		// uuid_validator(request);
 		try {
 			userID = env.UUID || userID;
-			พร็อกซีไอพี = env.PROXYIP || พร็อกซีไอพี;
+			พร็อกซีไอพี = env.พร็อกซีไอพีs || พร็อกซีไอพี;
 			dohURL = env.DNS_RESOLVER_URL || dohURL;
 			let userID_Path = userID;
 			if (userID.includes(',')) {
@@ -729,7 +729,7 @@ ${วเลสSec}
 
 	const htmlHead = `
   <head>
-	<title>VLESS FREE</title>
+	<title>AKUN FREE</title>
 
 
 	<style>
@@ -815,7 +815,7 @@ function สร้างวเลสSub(ไอดีผู้ใช้_เส้
 			if (!ชื่อโฮสต์.includes('pages.dev')) {
 				const ส่วนUrl = `${ชื่อโฮสต์}-HTTP-${พอร์ต}`;
 				const วเลสหลักHttp = atob(pt) + '://' + ไอดีผู้ใช้ + atob(at) + ชื่อโฮสต์ + ':' + พอร์ต + ส่วนUrlทั่วไปHttp + ส่วนUrl;
-				return proxyIP.flatMap((พร็อกซีไอพี) => {
+				return พร็อกซีไอพีs.flatMap((พร็อกซีไอพี) => {
 					const วเลสรองHttp = atob(pt) + '://' + ไอดีผู้ใช้ + atob(at) + พร็อกซีไอพี + ':' + พอร์ต + ส่วนUrlทั่วไปHttp + ส่วนUrl + '-' + พร็อกซีไอพี + '-' + atob(ed);
 					return [วเลสหลักHttp, วเลสรองHttp];
 				});
@@ -826,7 +826,7 @@ function สร้างวเลสSub(ไอดีผู้ใช้_เส้
 		const การกำหนดค่าHttps = Array.from(เซ็ตพอร์ตHttps).flatMap((พอร์ต) => {
 			const ส่วนUrl = `${ชื่อโฮสต์}-HTTPS-${พอร์ต}`;
 			const วเลสหลักHttps = atob(pt) + '://' + ไอดีผู้ใช้ + atob(at) + ชื่อโฮสต์ + ':' + พอร์ต + ส่วนUrlทั่วไปHttps + ส่วนUrl;
-			return proxyIP.flatMap((พร็อกซีไอพี) => {
+			return พร็อกซีไอพีs.flatMap((พร็อกซีไอพี) => {
 				const วเลสรองHttps = atob(pt) + '://' + ไอดีผู้ใช้ + atob(at) + พร็อกซีไอพี + ':' + พอร์ต + ส่วนUrlทั่วไปHttps + ส่วนUrl + '-' + พร็อกซีไอพี + '-' + atob(ed);
 				return [วเลสหลักHttps, วเลสรองHttps];
 			});
