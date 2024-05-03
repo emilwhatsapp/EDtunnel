@@ -726,19 +726,22 @@ function getวเลสConfig(userIDs, hostName) {
         Host: ${hostName}
     udp: true`;
 		return `
-		<center><h2>VLESS CLOUDFLARE FREE</h2>${hashSeparator}</center>
+		<h2>VLESS CLOUDFLARE FREE</h2>${hashSeparator}
 ===========================================
-<center>× Vless port 443</center>
+
+× Vless port 443
 ===========================================
 ${วเลสMain}
 <button onclick='copyToClipboard("${วเลสMain}")'><i class="fa fa-clipboard"></i> Copy vless 443</button>
 ===========================================
-<center>× Vless port 80</center>
+
+× Vless port 80
 ===========================================
 ${วเลสSec}
 <button onclick='copyToClipboard("${วเลสSec}")'><i class="fa fa-clipboard"></i> Copy vless 80</button>
 ===========================================
-<center>× Config Openclash</center>
+
+× Config Openclash
 ===========================================
 ${opclash}
 <button onclick='copyclash()'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
@@ -760,7 +763,7 @@ ${opclash}
         Host: ${hostName}
     udp: true
   </div>  
-<center>${hashSeparator}</center>`;
+${hashSeparator}`;
 	}).join('\n');
 	const sublink = `https://${hostName}/sub/${userIDArray[0]}?format=clash`
 	const subbestip = `https://${hostName}/bestip/${userIDArray[0]}`;
@@ -797,7 +800,7 @@ ${opclash}
 	  background-color: #f0f0f0;
 	  color: #333;
 	  padding: 10px;
-	  max-width: 80%; /* Menetapkan lebar maksimum untuk body */
+	  max-width: 100%; /* Menetapkan lebar maksimum untuk body */
         margin-left: auto;
         margin-right: auto;
 	}
