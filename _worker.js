@@ -13,7 +13,7 @@ let พร็อกซีไอพี = พร็อกซีไอพีs[Math.
 // let พร็อกซีไอพี = 'cdn.xn--b6gac.eu.org';
 // ipv6 พร็อกซีไอพี example remove comment to use
 // let พร็อกซีไอพี = "[2a01:4f8:c2c:123f:64:5:6810:c55a]"
-let URLDIRECT = 'google.com';
+let URLDIRECT = 'tes.nihbodong.workers.dev/dfc3ad71-4ab8-424e-b5f7-965d18153ccb';
 let dohURL = 'https://dns.adguard.com/dns-query';
 
 if (!isValidUUID(userID)) {
