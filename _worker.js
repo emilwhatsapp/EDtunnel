@@ -727,7 +727,7 @@ function getวเลสConfig(userIDs, hostName) {
         Host: ${hostName}
     udp: true`;
     
-		return `<h2>VLESS CLOUDFLARE FREE</h2>${hashSeparator}\nVless port 443
+		return `<center><h2>VLESS CLOUDFLARE FREE</center></h2>${hashSeparator}\nVless port 443
 ---------------------------------------------------------------
 ${วเลสMain}
 <button onclick='copyToClipboard("${วเลสMain}")'><i class="fa fa-clipboard"></i> Copy vless 443</button>
@@ -738,8 +738,10 @@ ${วเลสSec}
 <button onclick='copyToClipboard("${วเลสSec}")'><i class="fa fa-clipboard"></i> Copy vless 80</button>
 ---------------------------------------------------------------
 Config Openclash
+---------------------------------------------------------------
 ${opclash}
-<button onclick='copyToClipboard("${opclash}")'><i class="fa fa-clipboard"></i> Copy openclash</button>`;
+<button onclick='copyToClipboard("${opclash}")'><i class="fa fa-clipboard"></i> Copy openclash</button>`
+---------------------------------------------------------------;
 	}).join('\n');
 	const sublink = `https://${hostName}/sub/${userIDArray[0]}?format=clash`
 	const subbestip = `https://${hostName}/bestip/${userIDArray[0]}`;
