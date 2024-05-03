@@ -727,22 +727,22 @@ function getวเลสConfig(userIDs, hostName) {
     udp: true`;
 		return `
 		<center><h2>VLESS CLOUDFLARE FREE</h2>${hashSeparator}</center>
-=============================================
+===========================================
 <center>× Vless port 443</center>
-=============================================
+===========================================
 ${วเลสMain}
 <button onclick='copyToClipboard("${วเลสMain}")'><i class="fa fa-clipboard"></i> Copy vless 443</button>
-=============================================
+===========================================
 <center>× Vless port 80</center>
-=============================================
+===========================================
 ${วเลสSec}
 <button onclick='copyToClipboard("${วเลสSec}")'><i class="fa fa-clipboard"></i> Copy vless 80</button>
-=========================
+===========================================
 <center>× Config Openclash</center>
-=============================================
+===========================================
 ${opclash}
 <button onclick='copyclash()'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
-=============================================
+===========================================
 <div hidden id="code">
   - name: VLESS BODONG
     server: ${hostName}
@@ -775,7 +775,7 @@ ${opclash}
 	<title>VLESS CLOUDFLARE FREE</title>
 	<meta name='description' content='This is a tool for generating วเลส protocol configurations. Give us a star on GitHub https://github.com/3Kmfi6HP/EDtunnel if you found it useful!'>
 	<meta name='keywords' content='EDtunnel, cloudflare pages, cloudflare worker, severless'>
-	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta property='og:site_name' content='VLESS CF FREE configuration' />
 	<meta property='og:type' content='website' />
 	<meta property='og:title' content='VLESS CF FREE configuration and subscribe output' />
@@ -791,6 +791,11 @@ ${opclash}
 	<meta property='og:image:height' content='1500' />
 
 	<style>
+	@media (min-width: 769px) {
+    body {
+        /* Gaya CSS khusus untuk mode desktop */
+    }
+}
 	body {
 	  font-family: Arial, sans-serif;
 	  background-color: #f0f0f0;
