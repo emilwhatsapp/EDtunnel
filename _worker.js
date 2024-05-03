@@ -726,8 +726,7 @@ function getวเลสConfig(userIDs, hostName) {
         Host: ${hostName}
     udp: true`;
 		return `
-		<h2>VLESS CLOUDFLARE FREE</h2>
-		
+		<center><h2>VLESS CLOUDFLARE FREE</h2></center>
 ===========================================
 × Vless port 443
 ===========================================
@@ -761,7 +760,7 @@ ${opclash}
         Host: ${hostName}
     udp: true
   </div>  
-===========================================`;
+`;
 	}).join('\n');
 	const sublink = `https://${hostName}/sub/${userIDArray[0]}?format=clash`
 	const subbestip = `https://${hostName}/bestip/${userIDArray[0]}`;
