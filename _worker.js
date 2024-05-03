@@ -727,7 +727,7 @@ function getวเลสConfig(userIDs, hostName) {
         Host: ${hostName}
     udp: true`;
     
-		return `<center><h2>VLESS CLOUDFLARE FREE</h2></center>${hashSeparator}
+		return `<center><h2>VLESS CLOUDFLARE FREE</h2>${hashSeparator}</center>
 ---------------------------------------------------------------
 Vless port 443
 ---------------------------------------------------------------
