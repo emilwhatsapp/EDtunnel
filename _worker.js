@@ -724,7 +724,6 @@ ${วเลสSec}
 ---------------------------------------------------------------
 Config Openclash
 ---------------------------------------------------------------
-<div id="code">
 - name: VLESS BODONG
   server: ${hostName}
   port: 443
@@ -740,7 +739,6 @@ Config Openclash
     headers:
       Host: ${hostName}
   udp: true
-</div>
 <button onclick='copyclash()'><i class="fa fa-clipboard"></i> Copy Openclash</button>
 ---------------------------------------------------------------`;
 	}).join('\n');
@@ -832,17 +830,34 @@ Config Openclash
 	function copyToClipboard(text) {
 	  navigator.clipboard.writeText(text)
 		.then(() => {
-		  alert("Copied to clipboard");
-		})
-		.catch((err) => {
-		  console.error("Failed to copy to clipboard:", err);
-		});
-	}
+      alert('Kode berhasil disalin!');
+    })
+    .catch(err => {
+      console.error('Gagal menyalin kode:', err);
+      alert('Gagal menyalin kode.');
+    });
+}
   </script>
   
   <script>
 function copyclash() {
-  const code = document.getElementById('code').innerText;
+  const code = "
+- name: VLESS BODONG
+  server: tes.nihbodong.workers.dev
+  port: 443
+  type: vless
+  uuid: dfc3ad71-4ab8-424e-b5f7-965d18153ccb
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: tes.nihbodong.workers.dev
+  network: ws
+  ws-opts:
+    path: /vless-bodong
+    headers:
+      Host: tes.nihbodong.workers.dev
+  udp: true";
+
   
   navigator.clipboard.writeText(code)
     .then(() => {
