@@ -914,5 +914,4 @@ function สร้างวเลสSub(ไอดีผู้ใช้_เส้
 	return ผลลัพธ์.join('\n');
 }
 
-const cn_hostnames = [URL_DIRECT,
-];
+const cn_hostnames = [URLDIRECT];
