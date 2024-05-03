@@ -711,21 +711,7 @@ function getวเลสConfig(userIDs, hostName) {
 		const วเลสMain = atob(pt) + '://' + userID + atob(at) + hostName + commonUrlPart;
 		const วเลสSec = atob(pt) + '://' + userID + atob(at) + hostName + commonUrlPartt;
 		const opclash = `
-  - name: VLESS BODONG
-    server: ${hostName}
-    port: 443
-    type: vless
-    uuid: ${userID}
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: ${hostName}
-    network: ws
-    ws-opts:
-      path: /vless-bodong
-      headers:
-        Host: ${hostName}
-    udp: true`;
+tes bang`;
     
 		return `<center><h2>VLESS CLOUDFLARE FREE</center></h2>${hashSeparator}\nVless port 443
 ---------------------------------------------------------------
