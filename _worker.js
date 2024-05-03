@@ -740,8 +740,8 @@ ${วเลสSec}
 Config Openclash
 ---------------------------------------------------------------
 ${opclash}
-<button onclick='copyToClipboard("${opclash}")'><i class="fa fa-clipboard"></i> Copy openclash</button>`
----------------------------------------------------------------;
+<button onclick='copyToClipboard("${opclash}")'><i class="fa fa-clipboard"></i> Copy openclash</button>
+---------------------------------------------------------------`;
 	}).join('\n');
 	const sublink = `https://${hostName}/sub/${userIDArray[0]}?format=clash`
 	const subbestip = `https://${hostName}/bestip/${userIDArray[0]}`;
