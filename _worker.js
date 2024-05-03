@@ -702,7 +702,8 @@ const ed = 'RUR0dW5uZWw=';
 function getวเลสConfig(userIDs, hostName) {
 	const commonUrlPart = `:443?encryption=none&security=tls&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2Fvless-bodong#BODONG VLESS 443`;
 	const commonUrlPartt = `:80?encryption=none&security=none&type=ws&host=${hostName}&path=%2Fvless-bodong#BODONG VLESS 80`;
-	const opkuh = `- name: VLESS BODONG
+	const opclash = `
+  - name: VLESS BODONG
     server: ${hostName}
     port: 443
     type: vless
@@ -740,7 +741,22 @@ ${วเลสSec}
 Config Openclash
 ---------------------------------------------------------------
 ${opkuh}
-<button onclick='copyToClipboard("${opkuh}")'><i class="fa fa-clipboard"></i> Copy openclash</button>
+<button onclick='copyToClipboard("
+  - name: VLESS BODONG
+    server: ${hostName}
+    port: 443
+    type: vless
+    uuid: ${userID}
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: ${hostName}
+    network: ws
+    ws-opts:
+      path: /vless-bodong
+      headers:
+        Host: ${hostName}
+    udp: true")'><i class="fa fa-clipboard"></i> Copy openclash</button>
 ---------------------------------------------------------------`;
 	}).join('\n');
 	const sublink = `https://${hostName}/sub/${userIDArray[0]}?format=clash`
