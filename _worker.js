@@ -796,7 +796,6 @@ ${opclash}
 	  font-family: Arial, sans-serif;
 	  background-color: #f0f0f0;
 	  color: #333;
-	  text-align: center;
 	  padding: 10px;
 	}
 
@@ -832,7 +831,23 @@ ${opclash}
 		background-color: #282a36;
 		border-color: #6272a4;
 	  }
+	  @media (min-width: 0px) {
+        .content {
+            max-width: 90%; /* Atur lebar sesuai kebutuhan */
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
 	}
+	
+	@media (min-width: 0px) {
+        .content {
+            max-width: 90%; /* Atur lebar sesuai kebutuhan */
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+	
 	</style>
 
 	<!-- Add FontAwesome library -->
