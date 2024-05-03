@@ -791,10 +791,13 @@ ${opclash}
 	<meta property='og:image:height' content='1500' />
 
 	<style>
-	@media (min-width: 769px) {
-    body {
-        /* Gaya CSS khusus untuk mode desktop */
-    }
+	@media (max-width: 1024px) {
+    /* CSS khusus untuk mode ponsel */
+}
+
+/* Media query untuk mode desktop (berlaku juga untuk tablet) */
+@media (min-width: 1025px) {
+    /* CSS khusus untuk mode desktop (mungkin tidak ada perubahan dari mode ponsel) */
 }
 	body {
 	  font-family: Arial, sans-serif;
