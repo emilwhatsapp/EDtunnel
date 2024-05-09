@@ -12,4 +12,5 @@ custom_domain = true
 
 [vars]
 PROXYIP = "35.219.50.99"
-PASSWORD = "bodongvpn"
+UUID = "dfc3ad71-4ab8-424e-b5f7-965d18153ccb"
+DNS_NYA = "dns.adguard.com/dns-query"
