@@ -1,5 +1,5 @@
 name = "id1"
-main = "_worker.js"
+main = "_workervl.js"
 compatibility_date = "2023-05-26"
 
 [[routes]]
