@@ -13,4 +13,4 @@ custom_domain = true
 [vars]
 PROXYIP = "192.230.103.177"
 UUID = "dfc3ad71-4ab8-424e-b5f7-965d18153ccb"
-DNS_NYA = "https://dns.google.com/dns-query"
+DNS_RESOLVER_URL = "https://dns.google.com/dns-query"
