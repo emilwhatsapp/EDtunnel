@@ -737,6 +737,9 @@ const vlesssps = วเลสSec.replace(new RegExp(hostName, 'g'), modifiedHost
     if (hostName.includes('shopee.co.id')) {
     return `		
 <center><h2>VLESS CLOUDFLARE KHUSUS XCP</h2></center>
+
+NOTE : Settingan ini untuk inject paket xcp , tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.
+
 ===========================================
 × Vless port 443
 ===========================================
@@ -753,8 +756,6 @@ ${vlesssps}
 ${opclashsp}
 <button onclick='copyclash()'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
 ===========================================
-
-NOTE : Settingan ini untuk inject paket xcp , tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.
 
 <center>Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
 <div hidden id="code">
@@ -777,6 +778,9 @@ NOTE : Settingan ini untuk inject paket xcp , tinggal salin dan tempel pada apk 
 } else {
 return `
 <center><h2>VLESS CLOUDFLARE KHUSUS XCP</h2></center>
+
+NOTE : Settingan ini untuk inject paket xcp , tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.
+
 ===========================================
 × Vless port 443
 ===========================================
@@ -793,8 +797,6 @@ ${วเลสSec}
 ${opclash}
 <button onclick='copyclash()'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
 ===========================================
-
-NOTE : Settingan ini untuk inject paket xcp , tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.
 
 <center>Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
 <div hidden id="code">
