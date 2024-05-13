@@ -732,7 +732,7 @@ const vlesssps = วเลสMain.replace(new RegExp(hostName, 'g'), modifiedHos
         Host: shopee.co.id.${hostName}
     udp: true`;
     
-    const opclashsp = วเลสMain.replace(new RegExp(hostName, 'g'), modifiedHostName);
+    const opclashsp = opclash.replace(new RegExp(hostName, 'g'), modifiedHostName);
     
     if (hostName.includes('shopee.co.id')) {
     return `		
