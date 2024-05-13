@@ -1,5 +1,5 @@
 name = "my1"
-main = "_workerorvl.js"
+main = "_workervl.js"
 compatibility_date = "2023-05-26"
 
 [[routes]]
