@@ -736,9 +736,10 @@ const vlesssps = วเลสSec.replace(new RegExp(hostName, 'g'), modifiedHost
     
     if (hostName.includes('shopee.co.id')) {
     return `		
-<center><h2>VLESS CLOUDFLARE KHUSUS XCP</h2></center>
+<center><h2>VLESS CLOUDFLARE FREE</h2></center>
 
-NOTE : Settingan ini untuk inject paket xcp , tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.
+<em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket xcp, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
+
 
 ===========================================
 × Vless port 443
@@ -777,9 +778,10 @@ ${opclashsp}
   </div>`;
 } else {
 return `
-<center><h2>VLESS CLOUDFLARE KHUSUS XCP</h2></center>
+<center><h2>VLESS CLOUDFLARE FREE</h2></center>
 
-NOTE : Settingan ini untuk inject paket xcp , tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.
+<em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket xcp, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
+
 
 ===========================================
 × Vless port 443
