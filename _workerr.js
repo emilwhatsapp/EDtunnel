@@ -373,12 +373,11 @@ export {
 //# sourceMappingURL=worker.js.map
 function gettrojanConfig(Pswd, hostName) {
 
-	const trojantls = `trojan://${Pswd}\u0040${hostName}:443?security=tls&type=ws&host=shopee.co.id.${hostName}&sni=shopee.co.id.${hostName}&fp=random&path=%2Fvless-bodong#TROJAN-BODONG`;
+const trojantls = `trojan://${Pswd}\u0040${hostName}:443?security=tls&type=ws&host=shopee.co.id.${hostName}&sni=shopee.co.id.${hostName}&fp=random&path=%2Fvless-bodong#TROJAN-BODONG`;
 
-const domainToRemove = 'shopee.co.id.';
-const modifiedHostName = hostName.replace(new RegExp('^' + domainToRemove), '');
+const modifiedHostName = hostName.replace(/^shopee.co.id\./, '');
 
-const trojansp = trojantls.replace(new RegExp(domainToRemove, 'g'), modifiedHostName);
+const trojansp = trojantls.replace(new RegExp(hostName, 'g'), modifiedHostName);
 
 
 
