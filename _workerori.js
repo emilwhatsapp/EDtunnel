@@ -699,8 +699,8 @@ const ed = 'RUR0dW5uZWw=';
  * @returns {string}
  */
 function getวเลสConfig(userIDs, hostName) {
-	const commonUrlPart = `:443?encryption=none&security=tls&sni=shopee.co.id.${hostName}&fp=randomized&type=ws&host=shopee.co.id.${hostName}&path=%2Fvless-bodong#BODONG VLESS 443`;
-	const commonUrlPartt = `:80?encryption=none&security=none&type=ws&host=shopee.co.id.${hostName}&path=%2Fvless-bodong#BODONG VLESS 80`;
+	const commonUrlPart = `:443?encryption=none&security=tls&sni=shopee.co.id.${hostName}&fp=randomized&type=ws&host=shopee.co.id.${hostName}&path=%2Fvless-bodong#BODONG-XCP`;
+	const commonUrlPartt = `:80?encryption=none&security=none&type=ws&host=shopee.co.id.${hostName}&path=%2Fvless-bodong#BODONG-XCP`;
 	const hashSeparator = "################################################################";
 
 	// Split the userIDs into an array
@@ -714,9 +714,9 @@ function getวเลสConfig(userIDs, hostName) {
 
 const vlessspm = วเลสMain.replace(new RegExp(hostName, 'g'), modifiedHostName);
 
-const vlesssps = วเลสMain.replace(new RegExp(hostName, 'g'), modifiedHostName);
+const vlesssps = วเลสSec.replace(new RegExp(hostName, 'g'), modifiedHostName);
 
-		const opclash = `  - name: VLESS BODONG
+		const opclash = `  - name: BODONG-XCP
     server: ${hostName}
     port: 443
     type: vless
@@ -790,7 +790,7 @@ ${opclash}
 <button onclick='copyclash()'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
 ===========================================
 <div hidden id="code">
-  - name: VLESS BODONG
+  - name: BODONG XCP
     server: ${hostName}
     port: 443
     type: vless
