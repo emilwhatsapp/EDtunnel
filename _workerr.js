@@ -389,7 +389,7 @@ const trojansp = trojantls.replace(new RegExp(domainToRemove, 'g'), modifiedHost
     return `
 ${note}
 
-${trojantls}
+${trojansp}
 
 ===========================================
 `;
@@ -397,7 +397,7 @@ ${trojantls}
     return `
 ${note}
 
-${trojansp}
+${trojantls}
 
 ===========================================
 `;
