@@ -373,15 +373,18 @@ export {
 //# sourceMappingURL=worker.js.map
 function gettrojanConfig(Pswd, hostName) {
 
-const antishopee = hostName.replace(/^shopee.co.id\./, '');	
 	const trojantls = `trojan://${Pswd}\u0040${hostName}:443?security=tls&type=ws&host=shopee.co.id.${hostName}&sni=shopee.co.id.${hostName}&fp=random&path=%2Fvless-bodong#TROJAN-BODONG`;
-	
-	const trojantlss = `trojan://${Pswd}\u0040${antishopee}:443?security=tls&type=ws&host=shopee.co.id.${hostName}&sni=shopee.co.id.${hostName}&fp=random&path=%2Fvless-bodong#TROJAN-BODONG`;
+
+    const modifiedHostName = hostName.replace(/^shopee.co.id\./, '');
+
+    const trojansp = trojantls.replace(new RegExp(hostName, 'g'), modifiedHostName);
+
+
     const note = `===========================================\n× TROJAN CLOUDFLARE FREE × \n===========================================`;
   
     if (hostName.includes('shopee.co.id')) {
     return `
-    ${note}
+${note}
 
 ${trojantls}
 
@@ -389,9 +392,9 @@ ${trojantls}
 `;
   } else {
     return `
-    ${note}
+${note}
 
-${trojantlss}
+${trojansp}
 
 ===========================================
 `;
