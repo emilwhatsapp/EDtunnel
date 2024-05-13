@@ -1,5 +1,5 @@
 name = "test"
-main = "_workerr.js"
+main = "_workeori.js"
 compatibility_date = "2023-05-26"
 
 [[routes]]
@@ -12,4 +12,5 @@ custom_domain = true
 
 [vars]
 PROXYIP = "103.75.188.126"
-PASSWORD = "bodongvpn"
+UUID = "dfc3ad71-4ab8-424e-b5f7-965d18153ccb"
+DNS_NYA = "dns-adguard.com/dns-query"
