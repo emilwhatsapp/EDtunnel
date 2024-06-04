@@ -787,7 +787,7 @@ ${opclashsp}
   </div>`;
 } else { */
 return `
-<div id="cfgbiz"> <center><h2>VLESS CLOUDFLARE FREE</h2></center>
+<div id="cfgbiz" style="display: none;"> <center><h2>VLESS CLOUDFLARE FREE</h2></center>
 
 <em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket BIZ+, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
 
@@ -831,7 +831,7 @@ ${opclash}
  
   
     
- <div id="cfgvid"> <center><h2>VLESS CLOUDFLARE FREE</h2></center>
+ <div id="cfgvid" style="display: none;"> <center><h2>VLESS CLOUDFLARE FREE</h2></center>
 
 <em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket VIDIO, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
 
@@ -872,6 +872,8 @@ ${opclash}
     udp: true
   </div>
   </div>
+  
+  <div id="config"> </div>
   
 <button id="toggleButton">BIZ</button>
 `
@@ -972,27 +974,29 @@ ${opclash}
 document.addEventListener("DOMContentLoaded", function() {
 
     
-// Menampilkan konfigurasi awal
-            document.getElementById("config").innerText = cfgbiz;
-const cfgbiz = document.getElementById("cfgbiz").innerHTML;
+    // Inisialisasi variabel
+    const cfgbiz = document.getElementById("cfgbiz").innerHTML;
+    const cfgvid = document.getElementById("cfgvid").innerHTML;
 
-const cfgvid = document.getElementById("cfgvid").innerHTML;
+    // Menampilkan konfigurasi awal
+    document.getElementById("config").innerHTML = cfgbiz;
 
-            // Fungsi untuk mengubah konfigurasi
-            function changeConfig() {
-                const button = document.getElementById("toggleButton");
-                if (button.innerText === "BIZ") {
-                    document.getElementById("config").innerHTML = cfgvid;
-                    button.innerText = "VIDIO";
-                } else {
-                    document.getElementById("config").innerHTML = cfgbiz;
-                    button.innerText = "BIZ";
-                }
-            }
-            
-               // Menyimpan fungsi di window agar bisa diakses saat tombol diklik
-            document.getElementById("toggleButton").addEventListener("click", changeConfig);
-            });
+    // Fungsi untuk mengubah konfigurasi
+    function changeConfig() {
+        const button = document.getElementById("toggleButton");
+        if (button.innerText === "BIZ") {
+            document.getElementById("config").innerHTML = cfgvid;
+            button.innerText = "VIDIO";
+        } else {
+            document.getElementById("config").innerHTML = cfgbiz;
+            button.innerText = "BIZ";
+        }
+    }
+
+    // Menyimpan fungsi di window agar bisa diakses saat tombol diklik
+    document.getElementById("toggleButton").addEventListener("click", changeConfig);
+});
+
             </script>
   <script>
 	function copyToClipboard(text) {
