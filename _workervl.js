@@ -753,7 +753,8 @@ Gak Ada apa apa disini :).
 `
 } else {
 return `
-<div id="header"><h3>SILAHKAN PILIH SETTINGAN INJECT ANDA</h3>
+<div id="header"><center><h3>VLESS CLOUDFLARE FREE</h3></center>
+<em><span style="color: red;">NOTE:</span>Silahkan kalian pilih settingan untuk inject sesuai paket kalian.</em>
 </div>
 <div id="cfgvid" class="divContent" style="display: none !important;">
 <center><h2>VLESS CLOUDFLARE FREE</h2></center>
@@ -813,8 +814,9 @@ ${opclash}
 <center><button class="button" onclick="showText('cfgvid')">SETTINGAN VIDIO</button><br>
 <button class="button" onclick="showText('cfgbiz')">SETTINGAN BIZ</button><br>
 <button class="button" onclick="showText('cfgxcl')">SETTINGAN XCL</button><br>
-<center>
-<div id="result"></div>
+
+Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a>
+<div id="result"></div></center>
 
   `};
 	}).join('\n');
