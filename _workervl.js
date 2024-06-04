@@ -908,9 +908,8 @@ button:hover {
   color: #fff;
 }
 
-hidden {
-    display: none !important;
-}
+
+
 	
 	</style>
 
