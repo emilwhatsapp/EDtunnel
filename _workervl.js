@@ -778,7 +778,7 @@ ${วเลสSec}
 ${opclash}
 <button onclick='copyclash()'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
 ===========================================
-<div class="divContent" id="code">
+<div hidden id="code">
   - name: ${namevid}
     server: ${bugvidio}
     port: 443
