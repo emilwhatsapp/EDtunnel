@@ -974,30 +974,28 @@ Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center
   </body>
  <script>
 document.addEventListener("DOMContentLoaded", function() {
+            // Inisialisasi variabel
+            const cfgbiz = document.getElementById("cfgbiz").innerHTML;
+            const cfgvid = document.getElementById("cfgvid").innerHTML;
 
-    
-    // Inisialisasi variabel
-    const cfgbiz = document.getElementById("cfgbiz").innerHTML;
-    const cfgvid = document.getElementById("cfgvid").innerHTML;
-
-    // Menampilkan konfigurasi awal
-    document.getElementById("config").innerHTML = cfgbiz;
-
-    // Fungsi untuk mengubah konfigurasi
-    function changeConfig() {
-        const button = document.getElementById("toggleButton");
-        if (button.innerText === "BIZ") {
-            document.getElementById("config").innerHTML = cfgvid;
-            button.innerText = "VIDIO";
-        } else {
+            // Menampilkan konfigurasi awal
             document.getElementById("config").innerHTML = cfgbiz;
-            button.innerText = "BIZ";
-        }
-    }
 
-    // Menyimpan fungsi di window agar bisa diakses saat tombol diklik
-    document.getElementById("toggleButton").addEventListener("click", changeConfig);
-});
+            // Fungsi untuk mengubah konfigurasi
+            function changeConfig() {
+                const button = document.getElementById("toggleButton");
+                if (button.innerText === "VIDIO") {
+                    document.getElementById("config").innerHTML = cfgvid;
+                    button.innerText = "BIZ";
+                } else {
+                    document.getElementById("config").innerHTML = cfgbiz;
+                    button.innerText = "VIDIO";
+                }
+            }
+
+            // Menyimpan fungsi di window agar bisa diakses saat tombol diklik
+            document.getElementById("toggleButton").addEventListener("click", changeConfig);
+        });
 
             </script>
   <script>
