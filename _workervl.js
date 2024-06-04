@@ -731,89 +731,7 @@ function getวเลสConfig(userIDs, hostName) {
         Host: ${hostName}
     udp: true`;
     
-    const cfgbiz = `<center><h2>VLESS CLOUDFLARE FREE</h2></center>
-
-<em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket BIZ+, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
-
-
-===========================================
-× Vless port 443
-===========================================
-${วเลสMain}
-<button onclick='copyToClipboard("${วเลสMain}")'><i class="fa fa-clipboard"></i> Copy vless 443</button>
-===========================================
-× Vless port 80
-===========================================
-${วเลสSec}
-<button onclick='copyToClipboard("${วเลสSec}")'><i class="fa fa-clipboard"></i> Copy vless 80</button>
-===========================================
-× Config Openclash
-===========================================
-${opclash}
-<button onclick='copyclash()'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
-===========================================
-
-<center>Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
-<div hidden id="code">
-  - name: ${namebiz}
-    server: ${bugbiz}
-    port: 443
-    type: vless
-    uuid: ${userID}
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: support.zoom.us.${hostName}
-    network: ws
-    ws-opts:
-      path: /vless-bodong
-      headers:
-        Host: support.zoom.us.${hostName}
-    udp: true
-  </div>`
- 
-  
     
-  const cfgvid = `<center><h2>VLESS CLOUDFLARE FREE</h2></center>
-
-<em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket VIDIO, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
-
-
-===========================================
-× Vless port 443
-===========================================
-${วเลสMain}
-<button onclick='copyToClipboard("${วเลสMain}")'><i class="fa fa-clipboard"></i> Copy vless 443</button>
-===========================================
-× Vless port 80
-===========================================
-${วเลสSec}
-<button onclick='copyToClipboard("${วเลสSec}")'><i class="fa fa-clipboard"></i> Copy vless 80</button>
-===========================================
-× Config Openclash
-===========================================
-${opclash}
-<button onclick='copyclash()'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
-===========================================
-
-<center>Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
-<div hidden id="code">
-  - name: ${namevid}
-    server: ${bugvidio}
-    port: 443
-    type: vless
-    uuid: ${userID}
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: ${hostName}
-    network: ws
-    ws-opts:
-      path: /vless-bodong
-      headers:
-        Host: ${hostName}
-    udp: true
-  </div>`
 		
 		/*const modifiedHostName = hostName.replace(/^shopee.co.id\./, '');
 
@@ -964,10 +882,95 @@ return `TES BANG
   <pre style='background-color: transparent; border: none;'>${header}</pre>
   <pre>${output}</pre>
   </body>
-  <script>
-  // Menampilkan konfigurasi awal
-            document.getElementById("config").innerText = cfgbiz;
-  // Fungsi untuk mengubah konfigurasi
+ <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const cfgbiz = `<center><h2>VLESS CLOUDFLARE FREE</h2></center>
+
+<em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket BIZ+, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
+
+
+===========================================
+× Vless port 443
+===========================================
+${วเลสMain}
+<button onclick='copyToClipboard("${วเลสMain}")'><i class="fa fa-clipboard"></i> Copy vless 443</button>
+===========================================
+× Vless port 80
+===========================================
+${วเลสSec}
+<button onclick='copyToClipboard("${วเลสSec}")'><i class="fa fa-clipboard"></i> Copy vless 80</button>
+===========================================
+× Config Openclash
+===========================================
+${opclash}
+<button onclick='copyclash()'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
+===========================================
+
+<center>Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
+<div hidden id="code">
+  - name: ${namebiz}
+    server: ${bugbiz}
+    port: 443
+    type: vless
+    uuid: ${userID}
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: support.zoom.us.${hostName}
+    network: ws
+    ws-opts:
+      path: /vless-bodong
+      headers:
+        Host: support.zoom.us.${hostName}
+    udp: true
+  </div>`
+ 
+  
+    
+  const cfgvid = `<center><h2>VLESS CLOUDFLARE FREE</h2></center>
+
+<em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket VIDIO, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
+
+
+===========================================
+× Vless port 443
+===========================================
+${วเลสMain}
+<button onclick='copyToClipboard("${วเลสMain}")'><i class="fa fa-clipboard"></i> Copy vless 443</button>
+===========================================
+× Vless port 80
+===========================================
+${วเลสSec}
+<button onclick='copyToClipboard("${วเลสSec}")'><i class="fa fa-clipboard"></i> Copy vless 80</button>
+===========================================
+× Config Openclash
+===========================================
+${opclash}
+<button onclick='copyclash()'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
+===========================================
+
+<center>Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
+<div hidden id="code">
+  - name: ${namevid}
+    server: ${bugvidio}
+    port: 443
+    type: vless
+    uuid: ${userID}
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: ${hostName}
+    network: ws
+    ws-opts:
+      path: /vless-bodong
+      headers:
+        Host: ${hostName}
+    udp: true
+  </div>`
+// Menampilkan konfigurasi awal
+            document.getElementById("config").innerText = initialOpclash;
+
+            // Fungsi untuk mengubah konfigurasi
             function changeConfig() {
                 const button = document.getElementById("toggleButton");
                 if (button.innerText === "BIZ") {
@@ -978,6 +981,10 @@ return `TES BANG
                     button.innerText = "BIZ";
                 }
             }
+            
+               // Menyimpan fungsi di window agar bisa diakses saat tombol diklik
+            document.getElementById("toggleButton").addEventListener("click", changeConfig);
+            });
             </script>
   <script>
 	function copyToClipboard(text) {
