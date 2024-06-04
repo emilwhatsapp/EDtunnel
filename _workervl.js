@@ -756,7 +756,7 @@ return `
 <div id="header"><center><h3>VLESS CLOUDFLARE FREE</h3></center>
 <em><span style="color: red;">NOTE:</span>Silahkan kalian pilih settingan untuk inject sesuai paket kalian.</em>
 </div>
-<div hidden class="divContent" id="cfgvid">
+<div class="divContent" id="cfgvid">
 <center><h2>VLESS CLOUDFLARE FREE</h2></center>
 
 <em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket vidio, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
@@ -778,7 +778,7 @@ ${วเลสSec}
 ${opclash}
 <button onclick='copyclash()'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
 ===========================================
-<div hidden class="divContent" id="code">
+<div class="divContent" id="code">
   - name: ${namevid}
     server: ${bugvidio}
     port: 443
@@ -799,12 +799,12 @@ ${opclash}
     <!-- Isi konten untuk tombol 1 di sini -->
 </div>
 
-<div hidden class="divContent" id="cfgbiz">
+<div class="divContent" id="cfgbiz">
     <h2 style="text-align: center;">Coming soon.</h2>
     <!-- Isi konten untuk tombol 2 di sini -->
 </div>
 
-<div hidden class="divContent" id="cfgxcl">
+<div class="divContent" id="cfgxcl">
     <h2 style="text-align: center;">Coming soon.</h2>
     <!-- Isi konten untuk tombol 3 di sini -->
 </div>
@@ -908,7 +908,8 @@ button:hover {
 }
 
 
-hidden {
+.divContent {
+    display: none !important;
     height: 0 !important;
     overflow: hidden !important;
 }
