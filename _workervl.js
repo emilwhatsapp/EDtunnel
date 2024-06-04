@@ -706,7 +706,7 @@ function getวเลสConfig(userIDs, hostName) {
 
 	const commonUrlPart = `:443?encryption=none&security=tls&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2Fvless-bodong#${namevid}`;
 	const commonUrlPartt = `:80?encryption=none&security=none&type=ws&host=${hostName}&path=%2Fvless-bodong#${namevid}`;
-    const CommonUrlBiz = `:443?encryption=none&security=tls&sni=support.zoom.us.${hostName}&fp=randomized&type=ws&host=support.zoom.us.${hostName}&path=%2Fvless-bodong#${namebiz}`;
+    const commonUrlBiz = `:443?encryption=none&security=tls&sni=support.zoom.us.${hostName}&fp=randomized&type=ws&host=support.zoom.us.${hostName}&path=%2Fvless-bodong#${namebiz}`;
 	const commonUrlBizz = `:80?encryption=none&security=none&type=ws&host=support.zoom.us.${hostName}&path=%2Fvless-bodong#${namebiz}`;
 
 	const hashSeparator = "################################################################";
