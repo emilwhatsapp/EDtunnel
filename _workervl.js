@@ -900,8 +900,8 @@ button {
   color: #3b82f6;
   border: none;
   border-radius: 8px;
-  width: 100px;
-  height: 45px;
+  width: 150px;
+  height: 30px;
   transition: .3s;
 }
 
