@@ -731,61 +731,22 @@ function getวเลสConfig(userIDs, hostName) {
         Host: ${hostName}
     udp: true`;
     
+
+    
     
 		
-		/*const modifiedHostName = hostName.replace(/^shopee.co.id\./, '');
+const modifiedHostName = hostName.replace(/^support.zoom.us\./, '');
 
-const vlessspm = วเลสMain.replace(new RegExp(hostName, 'g'), modifiedHostName);
+const vlesssbiz = วเลสMain.replace(new RegExp(hostName, 'g'), modifiedHostName);
 
-const vlesssps = วเลสSec.replace(new RegExp(hostName, 'g'), modifiedHostName);
+const vlesssbizm = วเลสSec.replace(new RegExp(hostName, 'g'), modifiedHostName);
 
 		
     
-    const opclashsp = opclash.replace(new RegExp(hostName, 'g'), modifiedHostName);
+    const opclashbiz = opclash.replace(new RegExp(hostName, 'g'), modifiedHostName);
     
-    if (hostName.includes('shopee.co.id')) {
-    return `		
-<center><h2>VLESS CLOUDFLARE FREE</h2></center>
-
-<em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket video, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
-
-
-===========================================
-× Vless port 443
-===========================================
-${vlessspm}
-<button onclick='copyToClipboard("${vlessspm}")'><i class="fa fa-clipboard"></i> Copy vless 443</button>
-===========================================
-× Vless port 80
-===========================================
-${vlesssps}
-<button onclick='copyToClipboard("${vlesssps}")'><i class="fa fa-clipboard"></i> Copy vless 80</button>
-===========================================
-× Config Openclash
-===========================================
-${opclashsp}
-<button onclick='copyclash()'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
-===========================================
-
-<center>Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
-<div hidden id="code">
-  - name: BODONG-XCP
-    server: ${modifiedHostName}
-    port: 443
-    type: vless
-    uuid: ${userID}
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: shopee.co.id.${modifiedHostName}
-    network: ws
-    ws-opts:
-      path: /vless-bodong
-      headers:
-        Host: shopee.co.id.${modifiedHostName}
-    udp: true
-  </div>`;
-} else { */
+    if (hostName.includes('support.zoom.us')) {
+    
 return `
 <div id="config"></div>
 <center><button id="toggleButton" onclick="toggleConfig()">BIZ</button></center>
@@ -829,7 +790,12 @@ ${opclash}
         Host: support.zoom.us.${hostName}
     udp: true
   </div>
-  </div>    
+  </div>`
+  }
+  else { 
+  return `
+  <div id="config"></div>
+<center><button id="toggleButton" onclick="toggleConfig()">BIZ</button></center>
  <div hidden id="cfgvid"> <center><h2>VLESS CLOUDFLARE FREE</h2></center>
 
 <em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket VIDIO, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
@@ -870,7 +836,8 @@ ${opclash}
         Host: ${hostName}
     udp: true
   </div>
-  </div>`
+  </div>
+  `};
 	}).join('\n');
 	const sublink = `https://${hostName}/sub/${userIDArray[0]}?format=clash`
 	const subbestip = `https://${hostName}/bestip/${userIDArray[0]}`;
