@@ -756,7 +756,7 @@ return `
 <div id="header"><center><h3>VLESS CLOUDFLARE FREE</h3></center>
 <em><span style="color: red;">NOTE:</span>Silahkan kalian pilih settingan untuk inject sesuai paket kalian.</em>
 </div>
-<div id="cfgvid" class="divContent" style="display: none !important;">
+<div id="cfgvid" class="divContent" class"hidden">
 <center><h2>VLESS CLOUDFLARE FREE</h2></center>
 
 <em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket vidio, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
@@ -778,9 +778,7 @@ ${วเลสSec}
 ${opclash}
 <button onclick='copyclash()'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
 ===========================================
-
-<center>Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
-<div id="code" style="display: none !important">
+<div id="code" class"hidden">
   - name: ${namevid}
     server: ${bugvidio}
     port: 443
@@ -801,20 +799,18 @@ ${opclash}
     <!-- Isi konten untuk tombol 1 di sini -->
 </div>
 
-<div id="cfgbiz" class="divContent" style="display: none !important">
+<div id="cfgbiz" class"hidden">
     <h2 style="text-align: center;">Coming soon.</h2>
     <!-- Isi konten untuk tombol 2 di sini -->
 </div>
 
-<div id="cfgxcl" class="divContent" style="display: none !important">
+<div id="cfgxcl" class"hidden">
     <h2 style="text-align: center;">Coming soon.</h2>
     <!-- Isi konten untuk tombol 3 di sini -->
 </div>
-
 <center><button class="button" onclick="showText('cfgvid')">SETTINGAN VIDIO</button><br>
 <button class="button" onclick="showText('cfgbiz')">SETTINGAN BIZ</button><br>
 <button class="button" onclick="showText('cfgxcl')">SETTINGAN XCL</button><br>
-
 <div id="result"></div></center>
 <center>Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
 
@@ -913,6 +909,9 @@ button:hover {
   color: #fff;
 }
 
+.hidden {
+    display: none !important;
+}
 	
 	</style>
 
