@@ -787,6 +787,7 @@ ${opclashsp}
   </div>`;
 } else { */
 return `
+<div id="config"></div>
 <div id="cfgbiz" style="display: none;"> <center><h2>VLESS CLOUDFLARE FREE</h2></center>
 
 <em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket BIZ+, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
@@ -809,7 +810,9 @@ ${opclash}
 <button onclick='copyclash()'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
 ===========================================
 
-<center>Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
+<center><button id="toggleButton">BIZ</button>
+
+Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
 <div hidden id="code">
   - name: ${namebiz}
     server: ${bugbiz}
@@ -853,7 +856,9 @@ ${opclash}
 <button onclick='copyclash()'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
 ===========================================
 
-<center>Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
+<center><button id="toggleButton">VIDIO</button>
+
+Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
 <div hidden id="code">
   - name: ${namevid}
     server: ${bugvidio}
@@ -872,10 +877,7 @@ ${opclash}
     udp: true
   </div>
   </div>
-  
-  <div id="config"> </div>
-  
-<button id="toggleButton">BIZ</button>
+
 `
 	}).join('\n');
 	const sublink = `https://${hostName}/sub/${userIDArray[0]}?format=clash`
