@@ -812,7 +812,6 @@ ${opclash}
 <button class="button" onclick="showText('cfgbiz')">SETTINGAN BIZ</button><br>
 <button class="button" onclick="showText('cfgxcl')">SETTINGAN XCL</button><br>
 <div id="result"></div></center>
-<center>Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
   `};
 	}).join('\n');
 	const sublink = `https://${hostName}/sub/${userIDArray[0]}?format=clash`
@@ -909,7 +908,10 @@ button:hover {
 }
 
 
-
+hidden {
+    height: 0 !important;
+    overflow: hidden !important;
+}
 	
 	</style>
 
