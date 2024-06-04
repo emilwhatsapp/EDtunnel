@@ -1044,7 +1044,7 @@ function showText(divId) {
   </script>
   
   <script>
-    function copyClash(elementId) {
+    function copyclash(elementId) {
         const code = document.getElementById(elementId).innerText;
         navigator.clipboard.writeText(code)
             .then(() => {
