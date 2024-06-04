@@ -911,7 +911,7 @@ button:hover {
 
 hidden {
     display: none;
-    height: 0;
+    height: 1px;
     overflow: hidden;
 }	
 	</style>
@@ -945,6 +945,7 @@ function showText(divId) {
             button.style.display = 'inline-block';
         });
         resultDiv.innerHTML = ''; // Menghapus isi dari resultDiv
+        document.getElementById("header").style.display = "none";
         document.querySelectorAll('.divContent').forEach(div => {
             div.style.display = 'none'; // Menyembunyikan semua div konten
         });
@@ -965,6 +966,7 @@ function showText(divId) {
     
 
     // Menampilkan div konten yang dipilih
+    document.getElementById("header").style.display = "block";
     selectedDiv.style.display = 'block';
 }
 </script>
