@@ -763,10 +763,10 @@ function getวเลสConfig(userIDs, hostName) {
     udp: true`;
     
 // SETTINGAN XCL
-        const vlessxcl = atob(pt) + '://' + userID + atob(at) + bugxcl + commonUrlXcl;
-		const vlessxcll = atob(pt) + '://' + userID + atob(at) + bugxcl + commonUrlXcll;
+        const vlessxcl = atob(pt) + '://' + userID + atob(at) + hostName + commonUrlXcl;
+		const vlessxcll = atob(pt) + '://' + userID + atob(at) + hostName + commonUrlXcll;
 		const opclashxcl = `  - name: ${namexcl}
-    server: ${bugxcl}
+    server: ${hostName}
     port: 443
     type: vless
     uuid: ${userID}
@@ -793,8 +793,8 @@ const vlesssbizm = วเลสSec.replace(new RegExp(hostName, 'g'), modifiedHo
 */    
 
 		
-    if (hostName.includes('support.zoom.us')) {
-    
+    if (hostName.includes('support.zoom.us') || hostName === 'graph.instagram.com') 
+    {    
 return `
 Gak Ada apa apa disini :).
 `
@@ -909,7 +909,7 @@ ${opclashxcl}
 ===========================================
 <div hidden id="codexcl">
   - name: ${namexcl}
-    server: ${bugxcl}
+    server: ${hostName}
     port: 443
     type: vless
     uuid: ${userID}
