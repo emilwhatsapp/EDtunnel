@@ -940,10 +940,9 @@ function showText(divId) {
             button.style.display = 'inline-block';
         });
         resultDiv.innerHTML = ''; // Menghapus isi dari resultDiv
-        document.getElementById("header").style.display = "block";
         document.querySelectorAll('.divContent').forEach(div => {
             div.style.display = 'none'; // Menyembunyikan semua div konten
-              });
+        });
         resetButton.remove();
     };
 
@@ -958,7 +957,7 @@ function showText(divId) {
 
     // Menambahkan tombol kembali ke halaman awal ke dalam resultDiv
     resultDiv.appendChild(resetButton);
-    document.getElementById("header").style.display = "none";
+    
 
     // Menampilkan div konten yang dipilih
     selectedDiv.style.display = 'block';
