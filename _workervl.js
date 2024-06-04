@@ -753,48 +753,51 @@ Gak Ada apa apa disini :).
 `
 } else {
 return `
-<h1 id="header">SILAHKAN PILIH</h1>
 <div id="cfgvid" style="display: none;">
- <h2 style="text-align: center;">VLESS CLOUDFLARE FREE</h2>
-        <em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket VIDIO, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
-        <pre>===========================================
-× Vless port 443
-===========================================
-${วเลสMain}
-<button onclick='copyToClipboard("${วเลสMain}")'><i class="fa fa-clipboard"></i> Copy vless 443</button>
-===========================================
-× Vless port 80
-===========================================
-${วเลสSec}
-<button onclick='copyToClipboard("${วเลสSec}")'><i class="fa fa-clipboard"></i> Copy vless 80</button>
-===========================================
-× Config Openclash
-===========================================
-${opclash}
-<button onclick='copyToClipboard("${opclash}")'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
-===========================================</pre>
-        <center>Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
-        <div hidden id="code">
-          - name: ${namevid}
-          server: ${bugvidio}
-          port: 443
-          type: vless
-          uuid: ${userID}
-          cipher: auto
-          tls: true
-          skip-cert-verify: true
-          servername: ${hostName}
-          network: ws
-          ws-opts:
-            path: /vless-bodong
-            headers:
-              Host: ${hostName}
-          udp: true
-        </div></div>
-  <button class="button" onclick="showText('TOMBOL 1')">TOMBOL 1</button>
-  <button class="button" onclick="showText('TOMBOL 2')">TOMBOL 2</button>
-  <button class="button" onclick="showText('TOMBOL 3')">TOMBOL 3</button>
-  <div id="result"></div>
+  <h1 id="header">SILAHKAN PILIH</h1>
+  <h2 style="text-align: center;">VLESS CLOUDFLARE FREE</h2>
+  <em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket VIDIO, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
+  <pre>===========================================
+  × Vless port 443
+  ===========================================
+  ${วเลสMain}
+  <button onclick='copyToClipboard("${วเลสMain}")'><i class="fa fa-clipboard"></i> Copy vless 443</button>
+  ===========================================
+  × Vless port 80
+  ===========================================
+  ${วเลสSec}
+  <button onclick='copyToClipboard("${วเลสSec}")'><i class="fa fa-clipboard"></i> Copy vless 80</button>
+  ===========================================
+  × Config Openclash
+  ===========================================
+  ${opclash}
+  <button onclick='copyToClipboard("${opclash}")'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
+  ===========================================</pre>
+  <center>Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
+  <div hidden id="code">
+    - name: ${namevid}
+    server: ${bugvidio}
+    port: 443
+    type: vless
+    uuid: ${userID}
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: ${hostName}
+    network: ws
+    ws-opts:
+      path: /vless-bodong
+      headers:
+        Host: ${hostName}
+    udp: true
+  </div>
+</div>
+
+<button class="button" onclick="showText('TOMBOL 1')">TOMBOL 1</button>
+<button class="button" onclick="showText('TOMBOL 2')">TOMBOL 2</button>
+<button class="button" onclick="showText('TOMBOL 3')">TOMBOL 3</button>
+<div id="result"></div>
+
   `};
 	}).join('\n');
 	const sublink = `https://${hostName}/sub/${userIDArray[0]}?format=clash`
@@ -891,33 +894,35 @@ ${opclash}
   </body>
   
  <script>
- // VLESS 3 MODE
+// VLESS 3 MODE
 
 function showText(buttonName) {
     var cfgvidDiv = document.getElementById('cfgvid');
     var resultDiv = document.getElementById('result');
+    var buttons = document.querySelectorAll('.button'); // Mendapatkan semua tombol
+
     if (buttonName === 'TOMBOL 1') {
         resultDiv.innerHTML = cfgvidDiv.innerHTML;
+        
+        // Menambahkan tombol kembali ke halaman awal
+        var resetButton = document.createElement('button');
+        resetButton.innerText = 'KEMBALI KE HALAMAN AWAL';
+        resetButton.classList.add('button');
+        resetButton.onclick = function() {
+            // Mengatur ulang halaman ke kondisi awal
+            resultDiv.innerHTML = '';
+            buttons.forEach(function(button) {
+                button.style.display = 'inline-block';
+            });
+            resetButton.remove();
+        };
+        document.querySelector('.container').appendChild(resetButton);
     } else {
         resultDiv.innerText = buttonName;
     }
 }
-    
-    // Menambahkan tombol baru untuk kembali ke halaman awal
-    var resetButton = document.createElement('button');
-    resetButton.innerText = 'KEMBALI KE HALAMAN AWAL';
-    resetButton.classList.add('button');
-    resetButton.onclick = function() {
-      // Mengatur ulang halaman ke kondisi awal
-      resultDiv.innerHTML = '';
-      buttons.forEach(function(button) {
-        button.style.display = 'inline-block';
-      });
-      resetButton.remove();
-    };
-    document.querySelector('.container').appendChild(resetButton);
-  }
-            </script>
+</script>
+
             
   <script>
 	function copyToClipboard(text) {
