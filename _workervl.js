@@ -788,7 +788,7 @@ ${opclashsp}
 } else { */
 return `
 <div id="config"></div>
-<div id="cfgbiz" style="hidden"> <center><h2>VLESS CLOUDFLARE FREE</h2></center>
+<div hidden id="cfgbiz" style="hidden"> <center><h2>VLESS CLOUDFLARE FREE</h2></center>
 
 <em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket BIZ+, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
 
@@ -834,7 +834,7 @@ Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center
  
   
     
- <div id="cfgvid" style="hidden"> <center><h2>VLESS CLOUDFLARE FREE</h2></center>
+ <div hidden id="cfgvid"> <center><h2>VLESS CLOUDFLARE FREE</h2></center>
 
 <em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket VIDIO, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
 
