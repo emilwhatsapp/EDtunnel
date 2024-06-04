@@ -811,7 +811,8 @@ ${opclash}
 <center><button class="button" onclick="showText('cfgvid')">SETTINGAN VIDIO</button><br>
 <button class="button" onclick="showText('cfgbiz')">SETTINGAN BIZ</button><br>
 <button class="button" onclick="showText('cfgxcl')">SETTINGAN XCL</button><br>
-<div id="result"></div></center>
+<div id="result"></div>
+Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
   `};
 	}).join('\n');
 	const sublink = `https://${hostName}/sub/${userIDArray[0]}?format=clash`
@@ -945,7 +946,7 @@ function showText(divId) {
             button.style.display = 'inline-block';
         });
         resultDiv.innerHTML = ''; // Menghapus isi dari resultDiv
-        document.getElementById("header").style.display = "none";
+        document.getElementById("header").style.display = "block";
         document.querySelectorAll('.divContent').forEach(div => {
             div.style.display = 'none'; // Menyembunyikan semua div konten
         });
@@ -966,7 +967,7 @@ function showText(divId) {
     
 
     // Menampilkan div konten yang dipilih
-    document.getElementById("header").style.display = "block";
+    document.getElementById("header").style.display = "none";
     selectedDiv.style.display = 'block';
 }
 </script>
