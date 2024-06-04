@@ -816,7 +816,8 @@ ${opclash}
 <button class="button" onclick="showText('cfgxcl')">SETTINGAN XCL</button><br>
 
 Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a>
-<div id="result"></div></center>
+</center>
+<div id="result"></div>
 
   `};
 	}).join('\n');
