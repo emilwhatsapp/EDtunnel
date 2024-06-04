@@ -733,44 +733,7 @@ function getวเลสConfig(userIDs, hostName) {
     
 
     
- const cfgvid = `
- <center><h2>VLESS CLOUDFLARE FREE</h2></center>
-        <em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket VIDIO, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
-        <pre>===========================================
-× Vless port 443
-===========================================
-${วเลสMain}
-<button onclick='copyToClipboard("${วเลสMain}")'><i class="fa fa-clipboard"></i> Copy vless 443</button>
-===========================================
-× Vless port 80
-===========================================
-${วเลสSec}
-<button onclick='copyToClipboard("${วเลสSec}")'><i class="fa fa-clipboard"></i> Copy vless 80</button>
-===========================================
-× Config Openclash
-===========================================
-${opclash}
-<button onclick='copyToClipboard("${opclash}")'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
-===========================================</pre>
-        <center>Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
-        <div hidden id="code">
-          - name: ${namevid}
-          server: ${bugvidio}
-          port: 443
-          type: vless
-          uuid: ${userID}
-          cipher: auto
-          tls: true
-          skip-cert-verify: true
-          servername: ${hostName}
-          network: ws
-          ws-opts:
-            path: /vless-bodong
-            headers:
-              Host: ${hostName}
-          udp: true
-        </div>`;   
-		
+ 
 /*const modifiedHostName = hostName.replace(/^support.zoom.us\./, '');
 
 const vlesssbiz = วเลสMain.replace(new RegExp(hostName, 'g'), modifiedHostName);
@@ -888,8 +851,46 @@ return `
   <pre>${output}</pre>
   </body>
   
-  //VLESS 3 MODE INJECT
  <script>
+ // VLESS 3 MODE
+const cfgvid = `
+ <center><h2>VLESS CLOUDFLARE FREE</h2></center>
+        <em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket VIDIO, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
+        <pre>===========================================
+× Vless port 443
+===========================================
+${วเลสMain}
+<button onclick='copyToClipboard("${วเลสMain}")'><i class="fa fa-clipboard"></i> Copy vless 443</button>
+===========================================
+× Vless port 80
+===========================================
+${วเลสSec}
+<button onclick='copyToClipboard("${วเลสSec}")'><i class="fa fa-clipboard"></i> Copy vless 80</button>
+===========================================
+× Config Openclash
+===========================================
+${opclash}
+<button onclick='copyToClipboard("${opclash}")'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
+===========================================</pre>
+        <center>Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
+        <div hidden id="code">
+          - name: ${namevid}
+          server: ${bugvidio}
+          port: 443
+          type: vless
+          uuid: ${userID}
+          cipher: auto
+          tls: true
+          skip-cert-verify: true
+          servername: ${hostName}
+          network: ws
+          ws-opts:
+            path: /vless-bodong
+            headers:
+              Host: ${hostName}
+          udp: true
+        </div>`;   
+		
 function showText(buttonName) {
     // Menyembunyikan semua tombol
     var buttons = document.querySelectorAll('.button');
