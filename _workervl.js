@@ -942,7 +942,7 @@ function showText(divId) {
         resultDiv.innerHTML = ''; // Menghapus isi dari resultDiv
         document.getElementById("header").style.display = "block";
         document.querySelectorAll('.divContent').forEach(div => {
-            div.style.display = 'none !important'; // Menyembunyikan semua div konten
+            div.style.display = 'none'; // Menyembunyikan semua div konten
               });
         resetButton.remove();
     };
