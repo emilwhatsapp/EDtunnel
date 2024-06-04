@@ -703,8 +703,12 @@ const bugbiz = 'support.zoom.us';
  * @returns {string}
  */
 function getวเลสConfig(userIDs, hostName) {
+
 	const commonUrlPart = `:443?encryption=none&security=tls&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2Fvless-bodong#${namevid}`;
 	const commonUrlPartt = `:80?encryption=none&security=none&type=ws&host=${hostName}&path=%2Fvless-bodong#${namevid}`;
+    const CommonUrlBiz = `:443?encryption=none&security=tls&sni=support.zoom.us.${hostName}&fp=randomized&type=ws&host=support.zoom.us.${hostName}&path=%2Fvless-bodong#${namebiz}`;
+	const commonUrlBizz = `:80?encryption=none&security=none&type=ws&host=support.zoom.us.${hostName}&path=%2Fvless-bodong#${namebiz}`;
+
 	const hashSeparator = "################################################################";
 	
 
@@ -712,7 +716,8 @@ function getวเลสConfig(userIDs, hostName) {
 	const userIDArray = userIDs.split(",");
 
 	// Prepare output string for each userID
-	const output = userIDArray.map((userID) => {   
+	const output = userIDArray.map((userID) => {
+	// SETTINGAN VIDIO   
 		const วเลสMain = atob(pt) + '://' + userID + atob(at) + bugvidio + commonUrlPart;
 		const วเลสSec = atob(pt) + '://' + userID + atob(at) + bugvidio + commonUrlPartt;
 		const opclash = `  - name: ${namevid}
@@ -732,8 +737,25 @@ function getวเลสConfig(userIDs, hostName) {
     udp: true`;
     
 
-    
- 
+// SETTINGAN BIZ
+        const vlessbiz = atob(pt) + '://' + userID + atob(at) + bugbiz + commonUrlBiz;
+		const vlessbizz = atob(pt) + '://' + userID + atob(at) + bugbiz + commonUrlBizz;
+		const opclashbiz = `  - name: ${namevid}
+    server: ${bugbiz}
+    port: 443
+    type: vless
+    uuid: ${userID}
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: support.zoom.us.${hostName}
+    network: ws
+    ws-opts:
+      path: /vless-bodong
+      headers:
+        Host: support.zoom.us.${hostName}
+    udp: true`;
+
 /*const modifiedHostName = hostName.replace(/^support.zoom.us\./, '');
 
 const vlesssbiz = วเลสMain.replace(new RegExp(hostName, 'g'), modifiedHostName);
@@ -796,12 +818,46 @@ ${opclash}
     udp: true
   </div>
 </div>
-    <!-- Isi konten untuk tombol 1 di sini -->
-</div>
 
 <div hidden class="divContent" id="cfgbiz">
-    <h2 style="text-align: center;">Coming soon.</h2>
-    <!-- Isi konten untuk tombol 2 di sini -->
+<center><h2>VLESS CLOUDFLARE FREE</h2></center>
+
+<em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket vidio, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
+
+
+===========================================
+× Vless port 443
+===========================================
+${vlessbiz}
+<button onclick='copyToClipboard("${vlessbiz}")'><i class="fa fa-clipboard"></i> Copy vless 443</button>
+===========================================
+× Vless port 80
+===========================================
+${vlessbizz}
+<button onclick='copyToClipboard("${vlessbizz}")'><i class="fa fa-clipboard"></i> Copy vless 80</button>
+===========================================
+× Config Openclash
+===========================================
+${opclashbiz}
+<button onclick='copyclash()'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
+===========================================
+<div hidden id="code">
+  - name: ${namebiz}
+    server: ${bugbiz}
+    port: 443
+    type: vless
+    uuid: ${userID}
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: support.zoom.us.${hostName}
+    network: ws
+    ws-opts:
+      path: /vless-bodong
+      headers:
+        Host: support.zoom.us.${hostName}
+    udp: true
+  </div>
 </div>
 
 <div hidden class="divContent" id="cfgxcl">
