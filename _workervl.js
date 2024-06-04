@@ -756,7 +756,7 @@ return `
 <div id="header"><center><h3>VLESS CLOUDFLARE FREE</h3></center>
 <em><span style="color: red;">NOTE:</span>Silahkan kalian pilih settingan untuk inject sesuai paket kalian.</em>
 </div>
-<div class="divContent" id="cfgvid">
+<div hidden class="divContent" id="cfgvid">
 <center><h2>VLESS CLOUDFLARE FREE</h2></center>
 
 <em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket vidio, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
@@ -799,12 +799,12 @@ ${opclash}
     <!-- Isi konten untuk tombol 1 di sini -->
 </div>
 
-<div class="divContent" id="cfgbiz">
+<div hidden class="divContent" id="cfgbiz">
     <h2 style="text-align: center;">Coming soon.</h2>
     <!-- Isi konten untuk tombol 2 di sini -->
 </div>
 
-<div class="divContent" id="cfgxcl">
+<div hidden class="divContent" id="cfgxcl">
     <h2 style="text-align: center;">Coming soon.</h2>
     <!-- Isi konten untuk tombol 3 di sini -->
 </div>
@@ -908,7 +908,12 @@ button:hover {
 }
 
 
-	
+
+hidden {
+    display: none;
+    height: 0;
+    overflow: hidden;
+}	
 	</style>
 
 	<!-- Add FontAwesome library -->
