@@ -788,6 +788,7 @@ ${opclashsp}
 } else { */
 return `
 <div id="config"></div>
+<center><button id="toggleButton" onclick="toggleConfig()">BIZ</button></center>
 <div hidden id="cfgbiz" style="hidden"> <center><h2>VLESS CLOUDFLARE FREE</h2></center>
 
 <em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket BIZ+, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
@@ -810,9 +811,7 @@ ${opclash}
 <button onclick='copyclash()'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
 ===========================================
 
-<center><button id="toggleButton">VIDIO</button>
-
-Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
+<center>Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
 <div hidden id="code">
   - name: ${namebiz}
     server: ${bugbiz}
@@ -830,10 +829,7 @@ Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center
         Host: support.zoom.us.${hostName}
     udp: true
   </div>
-  </div>
- 
-  
-    
+  </div>    
  <div hidden id="cfgvid"> <center><h2>VLESS CLOUDFLARE FREE</h2></center>
 
 <em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket VIDIO, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
@@ -856,9 +852,7 @@ ${opclash}
 <button onclick='copyclash()'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
 ===========================================
 
-<center><button id="toggleButton">BIZ</button>
-
-Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
+<center>Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
 <div hidden id="code">
   - name: ${namevid}
     server: ${bugvidio}
@@ -876,9 +870,7 @@ Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center
         Host: ${hostName}
     udp: true
   </div>
-  </div>
-
-`
+  </div>`
 	}).join('\n');
 	const sublink = `https://${hostName}/sub/${userIDArray[0]}?format=clash`
 	const subbestip = `https://${hostName}/bestip/${userIDArray[0]}`;
@@ -973,34 +965,25 @@ Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center
   <pre>${output}</pre>
   </body>
  <script>
-document.addEventListener("DOMContentLoaded", function() {
-            // Inisialisasi variabel
-            const cfgbiz = document.getElementById("cfgbiz").innerHTML;
-            const cfgvid = document.getElementById("cfgvid").innerHTML;
-
-            // Menampilkan konfigurasi awal
-            document.getElementById("config").innerHTML = cfgbiz;
-
-            // Fungsi untuk mengubah konfigurasi
-            function changeConfig() {
-        const button = document.getElementById("toggleButton");
-        if (button.innerText === "VIDIO") {
-            document.getElementById("config").innerHTML = cfgvid;
-            button.innerText = "BIZ";
-        } else {
-            document.getElementById("config").innerHTML = cfgbiz;
-            button.innerText = "VIDIO";
-        }
-        // Hapus event listener yang lama
-        button.removeEventListener("click", changeConfig);
-        // Tambahkan event listener yang baru
-        button.addEventListener("click", changeConfig);
+function toggleConfig() {
+    const button = document.getElementById("toggleButton");
+    const config = document.getElementById("config");
+    const cfgbiz = document.getElementById("cfgbiz");
+    const cfgvid = document.getElementById("cfgvid");
+    
+    if (button.innerText === "SETTINGAN VIDIO") {
+        button.innerText = "SETTINGAN BIZ";
+        config.innerHTML = cfgvid.innerHTML;
+    } else {
+        button.innerText = "SETTINGAN VIDIO";
+        config.innerHTML = cfgbiz.innerHTML;
     }
+}
 
-            // Menyimpan fungsi di window agar bisa diakses saat tombol diklik
-            document.getElementById("toggleButton").addEventListener("click", changeConfig);
-        });
-
+// Panggil toggleConfig() saat DOM telah dimuat sepenuhnya
+document.addEventListener("DOMContentLoaded", function() {
+    toggleConfig(); // Ini akan memunculkan konfigurasi VLESS Cloudflare BIZ saat halaman dimuat
+});
             </script>
   <script>
 	function copyToClipboard(text) {
