@@ -755,7 +755,7 @@ Gak Ada apa apa disini :).
 return `
 <div id="header"><h3>SILAHKAN PILIH SETTINGAN INJECT ANDA</h3>
 </div>
-<div id="cfgvid" class="divContent" style="display: none;">
+<div id="cfgvid" class="divContent" style="display: none !important;">
 <center><h2>VLESS CLOUDFLARE FREE</h2></center>
 
 <em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket vidio, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
@@ -779,9 +779,9 @@ ${opclash}
 ===========================================
 
 <center>Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
-<div hidden id="code">
-  - name: ${namevl}
-    server: ${bughost}
+<div id="code" style="display: none !important">
+  - name: ${namevid}
+    server: ${bugvidio}
     port: 443
     type: vless
     uuid: ${userID}
@@ -800,12 +800,12 @@ ${opclash}
     <!-- Isi konten untuk tombol 1 di sini -->
 </div>
 
-<div id="cfgbiz" class="divContent" style="display: none;">
+<div id="cfgbiz" class="divContent" style="display: none !important">
     <h2 style="text-align: center;">Konten untuk Tombol 2</h2>
     <!-- Isi konten untuk tombol 2 di sini -->
 </div>
 
-<div id="cfgxcl" class="divContent" style="display: none;">
+<div id="cfgxcl" class="divContent" style="display: none !important">
     <h2 style="text-align: center;">Coming Soon.</h2>
     <!-- Isi konten untuk tombol 3 di sini -->
 </div>
