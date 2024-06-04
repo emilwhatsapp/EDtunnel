@@ -801,7 +801,7 @@ Gak Ada apa apa disini :).
 } else {
 return `
 <div id="header"><center><h2>VLESS CLOUDFLARE FREE</h2></center>
-<em><span style="color: red;">NOTE:</span>Silahkan kalian pilih settingan untuk inject sesuai paket kalian.</em> </div><div hidden class="divContent" id="cfgvid">
+<em><span style="color: red;">NOTE:</span>Silahkan kalian pilih settingan untuk inject sesuai paket kalian.</em> </div> <div hidden class="divContent" id="cfgvid">
 <center><h2>VLESS CLOUDFLARE FREE</h2></center>
 
 <em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket VIDIO, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
@@ -858,8 +858,7 @@ ${vlessbizz}
 ===========================================
 ${opclashbiz}
 <button onclick='copyclash("codebiz")'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
-===========================================
-<div hidden id="codebiz">
+===========================================/n<div hidden id="codebiz">
   - name: ${namebiz}
     server: ${bugbiz}
     port: 443
@@ -894,8 +893,7 @@ ${vlessxcll}
 ===========================================
 ${opclashxcl}
 <button onclick='copyclash("codexcl")'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
-===========================================
-<div hidden id="codexcl">
+===========================================/n<div hidden id="codexcl">
   - name: ${namexcl}
     server: ${hostName}
     port: 443
@@ -911,9 +909,9 @@ ${opclashxcl}
       headers:
         Host: graph.instagram.com.${hostName}
     udp: true  </div> </div>
-<center><button class="button" onclick="showText('cfgvid')">SETTINGAN VIDIO</button><br>
-<button class="button" onclick="showText('cfgbiz')">SETTINGAN BIZ</button><br>
-<button class="button" onclick="showText('cfgxcl')">SETTINGAN XCL</button><br> <div id="result"></div>
+<center><button class="button" onclick="showText('cfgvid')">SETTINGAN VIDIO</button>
+<button class="button" onclick="showText('cfgbiz')">SETTINGAN BIZ</button>
+<button class="button" onclick="showText('cfgxcl')">SETTINGAN XCL</button> <div id="result"></div>
 Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
   `};
 	}).join('\n');
