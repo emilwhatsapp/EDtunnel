@@ -801,19 +801,19 @@ ${opclash}
 </div>
 
 <div id="cfgbiz" class="divContent" style="display: none !important">
-    <h2 style="text-align: center;">Konten untuk Tombol 2</h2>
+    <h2 style="text-align: center;">Coming soon.</h2>
     <!-- Isi konten untuk tombol 2 di sini -->
 </div>
 
 <div id="cfgxcl" class="divContent" style="display: none !important">
-    <h2 style="text-align: center;">Coming Soon.</h2>
+    <h2 style="text-align: center;">Coming soon.</h2>
     <!-- Isi konten untuk tombol 3 di sini -->
 </div>
 
-<button class="button" onclick="showText('cfgvid')">SETTINGAN VIDIO</button>
-<button class="button" onclick="showText('cfgbiz')">SETTINGAN BIZ</button>
-<button class="button" onclick="showText('cfgxcl')">SETTINGAN XCL</button>
-
+<center><button class="button" onclick="showText('cfgvid')">SETTINGAN VIDIO</button><br>
+<button class="button" onclick="showText('cfgbiz')">SETTINGAN BIZ</button><br>
+<button class="button" onclick="showText('cfgxcl')">SETTINGAN XCL</button><br>
+<center>
 <div id="result"></div>
 
   `};
