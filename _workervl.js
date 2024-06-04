@@ -911,9 +911,9 @@ ${opclashxcl}
       headers:
         Host: graph.instagram.com.${hostName}
     udp: true  </div> </div>
-    <center><button class="button" onclick="showText('cfgvid')">SETTINGAN VIDIO</button><br>
-<button class="button" onclick="showText('cfgbiz')">SETTINGAN BIZ</button><br>
-<button class="button" onclick="showText('cfgxcl')">SETTINGAN XCL</button><br>
+    <center><button class="button" onclick="showText('cfgvid')">Vless Vidio</button><br>
+<button class="button" onclick="showText('cfgbiz')">Vless Biz</button><br>
+<button class="button" onclick="showText('cfgxcl')">Vless Xcl</button><br>
 <div id="result"></div>
 Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
   `};
@@ -995,7 +995,7 @@ Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center
 	
 button {
   text-align: center;
-  font-family: Arial, sans-serif;
+  font-family: monospace;
   background-color: #f3f7fe;
   color: #3b82f6;
   border: none;
@@ -1041,7 +1041,7 @@ function showText(divId) {
 
     // Menambahkan tombol kembali ke halaman awal setelah konten ditampilkan
     var resetButton = document.createElement('button');
-    resetButton.innerText = 'KEMBALI KE HALAMAN AWAL';
+    resetButton.innerText = 'Kembali ke halaman awal';
     resetButton.classList.add('button'); // Menambahkan kelas button
     resetButton.onclick = function() {
         // Mengatur ulang halaman ke kondisi awal     
