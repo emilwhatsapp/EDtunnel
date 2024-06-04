@@ -788,7 +788,7 @@ ${opclashsp}
 } else { */
 return `
 <div id="config"></div>
-<div id="cfgbiz" style="display: none;"> <center><h2>VLESS CLOUDFLARE FREE</h2></center>
+<div id="cfgbiz" style="hidden"> <center><h2>VLESS CLOUDFLARE FREE</h2></center>
 
 <em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket BIZ+, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
 
@@ -834,7 +834,7 @@ Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center
  
   
     
- <div id="cfgvid" style="display: none;"> <center><h2>VLESS CLOUDFLARE FREE</h2></center>
+ <div id="cfgvid" style="hidden"> <center><h2>VLESS CLOUDFLARE FREE</h2></center>
 
 <em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket VIDIO, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
 
@@ -983,15 +983,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
             // Fungsi untuk mengubah konfigurasi
             function changeConfig() {
-                const button = document.getElementById("toggleButton");
-                if (button.innerText === "VIDIO") {
-                    document.getElementById("config").innerHTML = cfgvid;
-                    button.innerText = "BIZ";
-                } else {
-                    document.getElementById("config").innerHTML = cfgbiz;
-                    button.innerText = "VIDIO";
-                }
-            }
+        const button = document.getElementById("toggleButton");
+        if (button.innerText === "VIDIO") {
+            document.getElementById("config").innerHTML = cfgvid;
+            button.innerText = "BIZ";
+        } else {
+            document.getElementById("config").innerHTML = cfgbiz;
+            button.innerText = "VIDIO";
+        }
+        // Hapus event listener yang lama
+        button.removeEventListener("click", changeConfig);
+        // Tambahkan event listener yang baru
+        button.addEventListener("click", changeConfig);
+    }
 
             // Menyimpan fungsi di window agar bisa diakses saat tombol diklik
             document.getElementById("toggleButton").addEventListener("click", changeConfig);
