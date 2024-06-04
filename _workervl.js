@@ -909,8 +909,8 @@ ${opclashxcl}
       headers:
         Host: graph.instagram.com.${hostName}
     udp: true  </div> </div>
-<center><button class="button" onclick="showText('cfgvid')">SETTINGAN VIDIO</button>
-<button class="button" onclick="showText('cfgbiz')">SETTINGAN BIZ</button>
+<center><button class="button" onclick="showText('cfgvid')">SETTINGAN VIDIO</button><br>
+<button class="button" onclick="showText('cfgbiz')">SETTINGAN BIZ</button><br>
 <button class="button" onclick="showText('cfgxcl')">SETTINGAN XCL</button> <div id="result"></div>
 Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
   `};
