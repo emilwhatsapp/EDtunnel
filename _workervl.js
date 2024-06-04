@@ -798,7 +798,7 @@ ${วเลสSec}
 × Config Openclash
 ===========================================
 ${opclash}
-<button onclick='copyclash()'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
+<button onclick='copyclash('code')'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
 ===========================================
 <div hidden id="code">
   - name: ${namevid}
@@ -839,7 +839,7 @@ ${vlessbizz}
 × Config Openclash
 ===========================================
 ${opclashbiz}
-<button onclick='copyclash()'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
+<button onclick='copyclash('codebiz')'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
 ===========================================
 <div hidden id="codebiz">
   - name: ${namebiz}
@@ -1044,11 +1044,8 @@ function showText(divId) {
   </script>
   
   <script>
-function copyclash() {
-    const code = document.getElementById('code').innerText;
-    const codebiz = document.getElementById('codebiz').innerText;
-  
-    if (navigator.clipboard.writeText(code)) {
+    function copyClash(elementId) {
+        const code = document.getElementById(elementId).innerText;
         navigator.clipboard.writeText(code)
             .then(() => {
                 alert('Kode berhasil disalin!');
@@ -1057,17 +1054,7 @@ function copyclash() {
                 console.error('Gagal menyalin kode:', err);
                 alert('Gagal menyalin kode.');
             });
-    } else if (navigator.clipboard.writeText(codebiz)) {
-        navigator.clipboard.writeText(codebiz)
-            .then(() => {
-                alert('Kode berhasil disalin!');
-            })
-            .catch(err => {
-                console.error('Gagal menyalin kode:', err);
-                alert('Gagal menyalin kode.');
-            });
     }
-}
 </script>
 
   </html>`;
