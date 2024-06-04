@@ -756,7 +756,7 @@ return `
 <div id="header"><center><h3>VLESS CLOUDFLARE FREE</h3></center>
 <em><span style="color: red;">NOTE:</span>Silahkan kalian pilih settingan untuk inject sesuai paket kalian.</em>
 </div>
-<div id="cfgvid" class"hidden">
+<div id="cfgvid">
 <center><h2>VLESS CLOUDFLARE FREE</h2></center>
 
 <em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket vidio, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
@@ -778,7 +778,7 @@ ${วเลสSec}
 ${opclash}
 <button onclick='copyclash()'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
 ===========================================
-<div id="code" class"hidden">
+<div id="code">
   - name: ${namevid}
     server: ${bugvidio}
     port: 443
@@ -799,12 +799,12 @@ ${opclash}
     <!-- Isi konten untuk tombol 1 di sini -->
 </div>
 
-<div id="cfgbiz" class"hidden">
+<div id="cfgbiz">
     <h2 style="text-align: center;">Coming soon.</h2>
     <!-- Isi konten untuk tombol 2 di sini -->
 </div>
 
-<div id="cfgxcl" class"hidden">
+<div id="cfgxcl">
     <h2 style="text-align: center;">Coming soon.</h2>
     <!-- Isi konten untuk tombol 3 di sini -->
 </div>
@@ -813,7 +813,6 @@ ${opclash}
 <button class="button" onclick="showText('cfgxcl')">SETTINGAN XCL</button><br>
 <div id="result"></div></center>
 <center>Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
-
   `};
 	}).join('\n');
 	const sublink = `https://${hostName}/sub/${userIDArray[0]}?format=clash`
@@ -928,7 +927,13 @@ button:hover {
   <pre style='background-color: transparent; border: none;'>${header}</pre>
   <pre>${output}</pre>
   </body>
-  
+ 
+  <script>
+ document.getElementById("cfgvid").style.display = "none";
+ document.getElementById("cfgbiz").style.display = "none";
+ document.getElementById("cfgxcl").style.display = "none";
+ document.getElementById("code").style.display = "none";
+</script> 
 <script>
 function showText(divId) {
     var resultDiv = document.getElementById('result');
