@@ -753,10 +753,10 @@ Gak Ada apa apa disini :).
 `
 } else {
 return `
-<div hidden id="header"><center><h3>VLESS CLOUDFLARE FREE</h3></center>
+<div id="header"><center><h3>VLESS CLOUDFLARE FREE</h3></center>
 <em><span style="color: red;">NOTE:</span>Silahkan kalian pilih settingan untuk inject sesuai paket kalian.</em>
 </div>
-<div id="cfgvid">
+<div hidden id="cfgvid">
 <center><h2>VLESS CLOUDFLARE FREE</h2></center>
 
 <em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket vidio, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
