@@ -900,7 +900,7 @@ button {
   color: #3b82f6;
   border: none;
   border-radius: 8px;
-  width: 150px;
+  width: fit-content;
   height: 30px;
   transition: .3s;
 }
