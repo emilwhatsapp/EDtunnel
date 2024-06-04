@@ -756,28 +756,32 @@ return `
 <div id="header"><h3>SILAHKAN PILIH SETTINGAN INJECT ANDA</h3>
 </div>
 <div id="cfgvid" class="divContent" style="display: none;">
-      <h2 style="text-align: center;">VLESS CLOUDFLARE FREE</h2>
-  <em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket VIDIO, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
-  ===========================================
-  × Vless port 443
-  ===========================================
-  ${วเลสMain}
-  <button onclick='copyToClipboard("${วเลสMain}")'><i class="fa fa-clipboard"></i> Copy vless 443</button>
-  ===========================================
-  × Vless port 80
-  ===========================================
-  ${วเลสSec}
-  <button onclick='copyToClipboard("${วเลสSec}")'><i class="fa fa-clipboard"></i> Copy vless 80</button>
-  ===========================================
-  × Config Openclash
-  ===========================================
-  ${opclash}
-  <button onclick='copyToClipboard("${opclash}")'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
-  ===========================================
-  <center>Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
-  <div hidden id="code">
-    - name: ${namevid}
-    server: ${bugvidio}
+<center><h2>VLESS CLOUDFLARE FREE</h2></center>
+
+<em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket vidio, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
+
+
+===========================================
+× Vless port 443
+===========================================
+${วเลสMain}
+<button onclick='copyToClipboard("${วเลสMain}")'><i class="fa fa-clipboard"></i> Copy vless 443</button>
+===========================================
+× Vless port 80
+===========================================
+${วเลสSec}
+<button onclick='copyToClipboard("${วเลสSec}")'><i class="fa fa-clipboard"></i> Copy vless 80</button>
+===========================================
+× Config Openclash
+===========================================
+${opclash}
+<button onclick='copyclash()'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
+===========================================
+
+<center>Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
+<div hidden id="code">
+  - name: ${namevl}
+    server: ${bughost}
     port: 443
     type: vless
     uuid: ${userID}
@@ -802,7 +806,7 @@ return `
 </div>
 
 <div id="cfgxcl" class="divContent" style="display: none;">
-    <h2 style="text-align: center;">Konten untuk Tombol 3</h2>
+    <h2 style="text-align: center;">Coming Soon.</h2>
     <!-- Isi konten untuk tombol 3 di sini -->
 </div>
 
@@ -917,8 +921,7 @@ function showText(divId) {
     resetButton.innerText = 'KEMBALI KE HALAMAN AWAL';
     resetButton.classList.add('button'); // Menambahkan kelas button
     resetButton.onclick = function() {
-        // Mengatur ulang halaman ke kondisi awal
-         document.getElementById("header").style.display = "none";       
+        // Mengatur ulang halaman ke kondisi awal     
         document.querySelectorAll('.button').forEach(button => {
             button.style.display = 'inline-block';
         });
@@ -940,6 +943,7 @@ function showText(divId) {
 
     // Menambahkan tombol kembali ke halaman awal ke dalam resultDiv
     resultDiv.appendChild(resetButton);
+    document.getElementById("header").style.display = "none";
 
     // Menampilkan div konten yang dipilih
     selectedDiv.style.display = 'block';
