@@ -740,7 +740,7 @@ function getวเลสConfig(userIDs, hostName) {
 // SETTINGAN BIZ
         const vlessbiz = atob(pt) + '://' + userID + atob(at) + bugbiz + commonUrlBiz;
 		const vlessbizz = atob(pt) + '://' + userID + atob(at) + bugbiz + commonUrlBizz;
-		const opclashbiz = `  - name: ${namevid}
+		const opclashbiz = `  - name: ${namebiz}
     server: ${bugbiz}
     port: 443
     type: vless
