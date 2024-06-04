@@ -753,7 +753,7 @@ Gak Ada apa apa disini :).
 `
 } else {
 return `
-<h1>SILAHKAN PILIH SETTINGAN INJECT ANDA</h1>
+<h1 id="header">SILAHKAN PILIH SETTINGAN INJECT ANDA</h1>
 <div id="cfgvid" class="divContent" style="display: none;">
       <h2 style="text-align: center;">VLESS CLOUDFLARE FREE</h2>
   <em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket VIDIO, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
