@@ -810,7 +810,7 @@ ${opclash}
 <button onclick='copyclash()'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
 ===========================================
 
-<center><button id="toggleButton">BIZ</button>
+<center><button id="toggleButton">VIDIO</button>
 
 Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
 <div hidden id="code">
@@ -856,7 +856,7 @@ ${opclash}
 <button onclick='copyclash()'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
 ===========================================
 
-<center><button id="toggleButton">VIDIO</button>
+<center><button id="toggleButton">BIZ</button>
 
 Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
 <div hidden id="code">
