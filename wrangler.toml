@@ -10,6 +10,12 @@ custom_domain = true
 pattern = "support.zoom.us.tes.blondies.cfd"
 custom_domain = true
 
+[[routes]]
+pattern = "graph.instagram.com.tes.blondies.cfd"
+custom_domain = true
+
+
+
 
 
 [vars]
