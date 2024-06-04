@@ -884,6 +884,7 @@ return `TES BANG
   </body>
  <script>
 document.addEventListener("DOMContentLoaded", function() {
+
     const cfgbiz = `<center><h2>VLESS CLOUDFLARE FREE</h2></center>
 
 <em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket BIZ+, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
@@ -923,7 +924,7 @@ ${opclash}
       headers:
         Host: support.zoom.us.${hostName}
     udp: true
-  </div>`
+  </div>`;
  
   
     
@@ -966,9 +967,10 @@ ${opclash}
       headers:
         Host: ${hostName}
     udp: true
-  </div>`
+  </div>`;
+  
 // Menampilkan konfigurasi awal
-            document.getElementById("config").innerText = initialOpclash;
+            document.getElementById("config").innerText = cfgbiz;
 
             // Fungsi untuk mengubah konfigurasi
             function changeConfig() {
