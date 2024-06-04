@@ -744,7 +744,17 @@ const vlesssbizm = วเลสSec.replace(new RegExp(hostName, 'g'), modifiedHo
     
     const opclashbiz = opclash.replace(new RegExp(hostName, 'g'), modifiedHostName);
 */    
-const cfgvid = `
+
+		
+    if (hostName.includes('support.zoom.us')) {
+    
+return `
+Gak Ada apa apa disini :).
+`
+} else {
+return `
+<h1 id="header">SILAHKAN PILIH</h1>
+<div id="cfgvid" style="display: none;">
  <h2 style="text-align: center;">VLESS CLOUDFLARE FREE</h2>
         <em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket VIDIO, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
         <pre>===========================================
@@ -780,16 +790,7 @@ ${opclash}
             headers:
               Host: ${hostName}
           udp: true
-        </div>`;   
-		
-    if (hostName.includes('support.zoom.us')) {
-    
-return `
-Gak Ada apa apa disini :).
-`
-} else {
-return `
-<h1 id="header">SILAHKAN PILIH</h1>
+        </div></div>
   <button class="button" onclick="showText('TOMBOL 1')">TOMBOL 1</button>
   <button class="button" onclick="showText('TOMBOL 2')">TOMBOL 2</button>
   <button class="button" onclick="showText('TOMBOL 3')">TOMBOL 3</button>
@@ -893,22 +894,14 @@ return `
  // VLESS 3 MODE
 
 function showText(buttonName) {
-    // Menyembunyikan semua tombol
-    var buttons = document.querySelectorAll('.button');
-    buttons.forEach(function(button) {
-      button.style.display = 'none';
-    });
-    
-    // Mengubah teks header
-    document.getElementById('header').innerText = 'ANDA MEMILIH';
-    
-    // Menampilkan teks hasil berdasarkan tombol yang diklik
+    var cfgvidDiv = document.getElementById('cfgvid');
     var resultDiv = document.getElementById('result');
     if (buttonName === 'TOMBOL 1') {
-      resultDiv.innerHTML = cfgvid;
+        resultDiv.innerHTML = cfgvidDiv.innerHTML;
     } else {
-      resultDiv.innerText = buttonName;
+        resultDiv.innerText = buttonName;
     }
+}
     
     // Menambahkan tombol baru untuk kembali ke halaman awal
     var resetButton = document.createElement('button');
@@ -916,7 +909,6 @@ function showText(buttonName) {
     resetButton.classList.add('button');
     resetButton.onclick = function() {
       // Mengatur ulang halaman ke kondisi awal
-      document.getElementById('header').innerText = 'SILAHKAN PILIH';
       resultDiv.innerHTML = '';
       buttons.forEach(function(button) {
         button.style.display = 'inline-block';
