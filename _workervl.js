@@ -841,7 +841,7 @@ ${vlessbizz}
 ${opclashbiz}
 <button onclick='copyclash()'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
 ===========================================
-<div hidden id="code">
+<div hidden id="codebiz">
   - name: ${namebiz}
     server: ${bugbiz}
     port: 443
@@ -1045,16 +1045,28 @@ function showText(divId) {
   
   <script>
 function copyclash() {
-  const code = document.getElementById('code').innerText;
+    const code = document.getElementById('code').innerText;
+    const codebiz = document.getElementById('codebiz').innerText;
   
-  navigator.clipboard.writeText(code)
-    .then(() => {
-      alert('Kode berhasil disalin!');
-    })
-    .catch(err => {
-      console.error('Gagal menyalin kode:', err);
-      alert('Gagal menyalin kode.');
-    });
+    if (navigator.clipboard.writeText(code)) {
+        navigator.clipboard.writeText(code)
+            .then(() => {
+                alert('Kode berhasil disalin!');
+            })
+            .catch(err => {
+                console.error('Gagal menyalin kode:', err);
+                alert('Gagal menyalin kode.');
+            });
+    } else if (navigator.clipboard.writeText(codebiz)) {
+        navigator.clipboard.writeText(codebiz)
+            .then(() => {
+                alert('Kode berhasil disalin!');
+            })
+            .catch(err => {
+                console.error('Gagal menyalin kode:', err);
+                alert('Gagal menyalin kode.');
+            });
+    }
 }
 </script>
 
