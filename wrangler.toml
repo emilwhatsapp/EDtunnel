@@ -6,6 +6,10 @@ compatibility_date = "2023-05-26"
 pattern = "tes.blondies.cfd"
 custom_domain = true
 
+[[routes]]
+pattern = "support.zoom.us.tes.blondies.cfd"
+custom_domain = true
+
 
 
 [vars]
