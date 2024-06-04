@@ -753,9 +753,10 @@ Gak Ada apa apa disini :).
 `
 } else {
 return `
-<div id="cfgvid" style="display: none;">
-  <h1 id="header">SILAHKAN PILIH</h1>
-  <h2 style="text-align: center;">VLESS CLOUDFLARE FREE</h2>
+<h1 id="header">SILAHKAN PILIH</h1>
+
+<div id="cfgvid" class="divContent" style="display: none;">
+      <h2 style="text-align: center;">VLESS CLOUDFLARE FREE</h2>
   <em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket VIDIO, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
   <pre>===========================================
   × Vless port 443
@@ -792,10 +793,23 @@ return `
     udp: true
   </div>
 </div>
+    <!-- Isi konten untuk tombol 1 di sini -->
+</div>
 
-<button class="button" onclick="showText('TOMBOL 1')">TOMBOL 1</button>
-<button class="button" onclick="showText('TOMBOL 2')">TOMBOL 2</button>
-<button class="button" onclick="showText('TOMBOL 3')">TOMBOL 3</button>
+<div id="cfgbiz" class="divContent" style="display: none;">
+    <h2 style="text-align: center;">Konten untuk Tombol 2</h2>
+    <!-- Isi konten untuk tombol 2 di sini -->
+</div>
+
+<div id="cfgxcl" class="divContent" style="display: none;">
+    <h2 style="text-align: center;">Konten untuk Tombol 3</h2>
+    <!-- Isi konten untuk tombol 3 di sini -->
+</div>
+
+<button class="button" onclick="showText('cfgvid')">SETTINGAN VIDIO</button>
+<button class="button" onclick="showText('cfgbiz')">SETTINGAN BIZ</button>
+<button class="button" onclick="showText('cfgxcl')">SETTINGAN XCL</button>
+
 <div id="result"></div>
 
   `};
@@ -893,35 +907,45 @@ return `
   <pre>${output}</pre>
   </body>
   
- <script>
-// VLESS 3 MODE
-
-function showText(buttonName) {
-    var cfgvidDiv = document.getElementById('cfgvid');
+<script>
+function showText(divId) {
     var resultDiv = document.getElementById('result');
-    var buttons = document.querySelectorAll('.button'); // Mendapatkan semua tombol
+    var selectedDiv = document.getElementById(divId);
 
-    if (buttonName === 'TOMBOL 1') {
-        resultDiv.innerHTML = cfgvidDiv.innerHTML;
-        
-        // Menambahkan tombol kembali ke halaman awal
-        var resetButton = document.createElement('button');
-        resetButton.innerText = 'KEMBALI KE HALAMAN AWAL';
-        resetButton.classList.add('button');
-        resetButton.onclick = function() {
-            // Mengatur ulang halaman ke kondisi awal
-            resultDiv.innerHTML = '';
-            buttons.forEach(function(button) {
-                button.style.display = 'inline-block';
-            });
-            resetButton.remove();
-        };
-        document.querySelector('.container').appendChild(resetButton);
-    } else {
-        resultDiv.innerText = buttonName;
-    }
+    // Menambahkan tombol kembali ke halaman awal setelah konten ditampilkan
+    var resetButton = document.createElement('button');
+    resetButton.innerText = 'KEMBALI KE HALAMAN AWAL';
+    resetButton.classList.add('button'); // Menambahkan kelas button
+    resetButton.onclick = function() {
+        // Mengatur ulang halaman ke kondisi awal
+        document.getElementById('header').innerText = 'SILAHKAN PILIH';
+        document.querySelectorAll('.button').forEach(button => {
+            button.style.display = 'inline-block';
+        });
+        resultDiv.innerHTML = ''; // Menghapus isi dari resultDiv
+        document.querySelectorAll('.divContent').forEach(div => {
+            div.style.display = 'none'; // Menyembunyikan semua div konten
+        });
+        resetButton.remove();
+    };
+
+    // Menyembunyikan semua tombol
+    document.querySelectorAll('.button').forEach(button => {
+        button.style.display = 'none';
+    });
+
+    // Menambahkan konten dari div yang dipilih ke dalam resultDiv
+    resultDiv.innerHTML = ''; // Menghapus isi dari resultDiv
+    resultDiv.appendChild(selectedDiv.cloneNode(true)); // Menambahkan konten dari div yang dipilih
+
+    // Menambahkan tombol kembali ke halaman awal ke dalam resultDiv
+    resultDiv.appendChild(resetButton);
+
+    // Menampilkan div konten yang dipilih
+    selectedDiv.style.display = 'block';
 }
 </script>
+
 
             
   <script>
