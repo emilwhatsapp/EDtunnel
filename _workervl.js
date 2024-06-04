@@ -964,6 +964,7 @@ return `TES BANG
   <pre style='background-color: transparent; border: none;'>${header}</pre>
   <pre>${output}</pre>
   </body>
+  <script>
   // Menampilkan konfigurasi awal
             document.getElementById("config").innerText = cfgbiz;
   // Fungsi untuk mengubah konfigurasi
@@ -977,6 +978,7 @@ return `TES BANG
                     button.innerText = "BIZ";
                 }
             }
+            </script>
   <script>
 	function copyToClipboard(text) {
 	  navigator.clipboard.writeText(text)
