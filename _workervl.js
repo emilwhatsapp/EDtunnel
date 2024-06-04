@@ -908,11 +908,6 @@ button:hover {
 }
 
 
-.divContent {
-    display: none !important;
-    height: 0 !important;
-    overflow: hidden !important;
-}
 	
 	</style>
 
@@ -948,7 +943,9 @@ function showText(divId) {
         document.getElementById("header").style.display = "block";
         document.querySelectorAll('.divContent').forEach(div => {
             div.style.display = 'none'; // Menyembunyikan semua div konten
-        });
+    div.style.height = '0'; // Menetapkan tinggi elemen menjadi 0
+    div.style.overflow = 'hidden'; // Mengatur overflow menjadi hidden
+         });
         resetButton.remove();
     };
 
