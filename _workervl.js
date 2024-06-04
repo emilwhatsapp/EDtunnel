@@ -913,8 +913,7 @@ ${opclashxcl}
     udp: true  </div> </div>
 <center><button class="button" onclick="showText('cfgvid')">SETTINGAN VIDIO</button><br>
 <button class="button" onclick="showText('cfgbiz')">SETTINGAN BIZ</button><br>
-<button class="button" onclick="showText('cfgxcl')">SETTINGAN XCL</button><br>
-<div id="result"></div>
+<button class="button" onclick="showText('cfgxcl')">SETTINGAN XCL</button><br> <div id="result"></div>
 Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
   `};
 	}).join('\n');
