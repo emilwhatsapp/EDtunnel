@@ -858,7 +858,8 @@ ${vlessbizz}
 ===========================================
 ${opclashbiz}
 <button onclick='copyclash("codebiz")'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
-===========================================/n<div hidden id="codebiz">
+===========================================
+<div hidden id="codebiz">
   - name: ${namebiz}
     server: ${bugbiz}
     port: 443
@@ -873,8 +874,7 @@ ${opclashbiz}
       path: /vless-bodong
       headers:
         Host: support.zoom.us.${hostName}
-    udp: true </div> </div>
- <div hidden class="divContent" id="cfgxcl"> <center><h2>VLESS CLOUDFLARE FREE</h2></center>
+    udp: true </div> </div> <div hidden class="divContent" id="cfgxcl"> <center><h2>VLESS CLOUDFLARE FREE</h2></center>
 
 <em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket XCL + ADDON IG, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
 
@@ -894,7 +894,8 @@ ${vlessxcll}
 ===========================================
 ${opclashxcl}
 <button onclick='copyclash("codexcl")'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
-===========================================/n<div hidden id="codexcl">
+===========================================
+<div hidden id="codexcl">
   - name: ${namexcl}
     server: ${hostName}
     port: 443
@@ -912,7 +913,7 @@ ${opclashxcl}
     udp: true  </div> </div>
     <center><button class="button" onclick="showText('cfgvid')">SETTINGAN VIDIO</button><br>
 <button class="button" onclick="showText('cfgbiz')">SETTINGAN BIZ</button><br>
-<button class="button" onclick="showText('cfgxcl')"> SETTINGAN XCL</button><br>
+<button class="button" onclick="showText('cfgxcl')">SETTINGAN XCL</button><br>
 <div id="result"></div>
 Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
   `};
