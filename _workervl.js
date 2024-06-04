@@ -694,8 +694,10 @@ const pt = 'dmxlc3M=';
 const ed = 'RUR0dW5uZWw=';
 const namebiz ='VLESS-BIZ';
 const namevid = 'VLESS-VIDIO';
+const namexcl = 'VLESS-XCL';
 const bugvidio = 'quiz.staging.vidio.com';
 const bugbiz = 'support.zoom.us';
+const bugxcl = 'graph.instagram.com';
 /**
  *
  * @param {string} userID - single or comma separated userIDs
@@ -703,11 +705,15 @@ const bugbiz = 'support.zoom.us';
  * @returns {string}
  */
 function getวเลสConfig(userIDs, hostName) {
-
+//VIDIO
 	const commonUrlPart = `:443?encryption=none&security=tls&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2Fvless-bodong#${namevid}`;
 	const commonUrlPartt = `:80?encryption=none&security=none&type=ws&host=${hostName}&path=%2Fvless-bodong#${namevid}`;
-    const commonUrlBiz = `:443?encryption=none&security=tls&sni=support.zoom.us.${hostName}&fp=randomized&type=ws&host=support.zoom.us.${hostName}&path=%2Fvless-bodong#${namebiz}`;
+//BIZ   
+     const commonUrlBiz = `:443?encryption=none&security=tls&sni=support.zoom.us.${hostName}&fp=randomized&type=ws&host=support.zoom.us.${hostName}&path=%2Fvless-bodong#${namebiz}`;
 	const commonUrlBizz = `:80?encryption=none&security=none&type=ws&host=support.zoom.us.${hostName}&path=%2Fvless-bodong#${namebiz}`;
+//XCL
+    const commonUrlXcl = `:443?encryption=none&security=tls&sni=graph.instagram.com.${hostName}&fp=randomized&type=ws&host=graph.instagram.com.${hostName}&path=%2Fvless-bodong#${namexcl}`;
+	const commonUrlXcll = `:80?encryption=none&security=none&type=ws&host=graph.instagram.com.${hostName}&path=%2Fvless-bodong#${namexcl}`;
 
 	const hashSeparator = "################################################################";
 	
@@ -754,6 +760,25 @@ function getวเลสConfig(userIDs, hostName) {
       path: /vless-bodong
       headers:
         Host: support.zoom.us.${hostName}
+    udp: true`;
+    
+// SETTINGAN XCL
+        const vlessxcl = atob(pt) + '://' + userID + atob(at) + bugxcl + commonUrlXcl;
+		const vlessxcll = atob(pt) + '://' + userID + atob(at) + bugxcl + commonUrlXcll;
+		const opclashxcl = `  - name: ${namexcl}
+    server: ${bugxcl}
+    port: 443
+    type: vless
+    uuid: ${userID}
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: graph.instagram.com.${hostName}
+    network: ws
+    ws-opts:
+      path: /vless-bodong
+      headers:
+        Host: graph.instagram.com.${hostName}
     udp: true`;
 
 /*const modifiedHostName = hostName.replace(/^support.zoom.us\./, '');
@@ -861,8 +886,44 @@ ${opclashbiz}
 </div>
 
 <div hidden class="divContent" id="cfgxcl">
-    <h2 style="text-align: center;">Coming soon.</h2>
-    <!-- Isi konten untuk tombol 3 di sini -->
+<center><h2>VLESS CLOUDFLARE FREE</h2></center>
+
+<em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket XCL + ADDON IG, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
+
+
+===========================================
+× Vless port 443
+===========================================
+${vlessxcl}
+<button onclick='copyToClipboard("${vlessxcl}")'><i class="fa fa-clipboard"></i> Copy vless 443</button>
+===========================================
+× Vless port 80
+===========================================
+${vlessxcll}
+<button onclick='copyToClipboard("${vlessxcll}")'><i class="fa fa-clipboard"></i> Copy vless 80</button>
+===========================================
+× Config Openclash
+===========================================
+${opclashxcl}
+<button onclick='copyclash("codexcl")'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
+===========================================
+<div hidden id="codexcl">
+  - name: ${namexcl}
+    server: ${bugxcl}
+    port: 443
+    type: vless
+    uuid: ${userID}
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: graph.instagram.com.${hostName}
+    network: ws
+    ws-opts:
+      path: /vless-bodong
+      headers:
+        Host: graph.instagram.com.${hostName}
+    udp: true
+  </div>
 </div>
 <center><button class="button" onclick="showText('cfgvid')">SETTINGAN VIDIO</button><br>
 <button class="button" onclick="showText('cfgbiz')">SETTINGAN BIZ</button><br>
