@@ -798,7 +798,7 @@ ${วเลสSec}
 × Config Openclash
 ===========================================
 ${opclash}
-<button onclick='copyclash('code')'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
+<button onclick='copyclash("code")'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
 ===========================================
 <div hidden id="code">
   - name: ${namevid}
@@ -839,7 +839,7 @@ ${vlessbizz}
 × Config Openclash
 ===========================================
 ${opclashbiz}
-<button onclick='copyclash('codebiz')'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
+<button onclick='copyclash("codebiz")'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
 ===========================================
 <div hidden id="codebiz">
   - name: ${namebiz}
