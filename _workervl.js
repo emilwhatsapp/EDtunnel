@@ -754,11 +754,10 @@ Gak Ada apa apa disini :).
 } else {
 return `
 <h1 id="header">SILAHKAN PILIH</h1>
-
-<div id="cfgvid" class="divContent" style="display: none;">
+<div id="cfgvid" style="display: none;">
       <h2 style="text-align: center;">VLESS CLOUDFLARE FREE</h2>
   <em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket VIDIO, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
-  <pre>===========================================
+  ===========================================
   × Vless port 443
   ===========================================
   ${วเลสMain}
@@ -773,7 +772,7 @@ return `
   ===========================================
   ${opclash}
   <button onclick='copyToClipboard("${opclash}")'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
-  ===========================================</pre>
+  ===========================================
   <center>Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
   <div hidden id="code">
     - name: ${namevid}
@@ -918,8 +917,7 @@ function showText(divId) {
     resetButton.classList.add('button'); // Menambahkan kelas button
     resetButton.onclick = function() {
         // Mengatur ulang halaman ke kondisi awal
-        document.getElementById('header').innerText = 'SILAHKAN PILIH';
-        document.querySelectorAll('.button').forEach(button => {
+            document.querySelectorAll('.button').forEach(button => {
             button.style.display = 'inline-block';
         });
         resultDiv.innerHTML = ''; // Menghapus isi dari resultDiv
