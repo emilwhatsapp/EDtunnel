@@ -753,7 +753,8 @@ Gak Ada apa apa disini :).
 `
 } else {
 return `
-<h1>SILAHKAN PILIH SETTINGAN INJECT ANDA</h1>
+<div id="header"><h3>SILAHKAN PILIH SETTINGAN INJECT ANDA</h3>
+</div>
 <div id="cfgvid" class="divContent" style="display: none;">
       <h2 style="text-align: center;">VLESS CLOUDFLARE FREE</h2>
   <em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket VIDIO, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
@@ -916,7 +917,8 @@ function showText(divId) {
     resetButton.innerText = 'KEMBALI KE HALAMAN AWAL';
     resetButton.classList.add('button'); // Menambahkan kelas button
     resetButton.onclick = function() {
-        // Mengatur ulang halaman ke kondisi awal        
+        // Mengatur ulang halaman ke kondisi awal
+         document.getElementById("header").style.display = "none";       
         document.querySelectorAll('.button').forEach(button => {
             button.style.display = 'inline-block';
         });
