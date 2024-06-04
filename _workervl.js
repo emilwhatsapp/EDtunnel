@@ -942,10 +942,8 @@ function showText(divId) {
         resultDiv.innerHTML = ''; // Menghapus isi dari resultDiv
         document.getElementById("header").style.display = "block";
         document.querySelectorAll('.divContent').forEach(div => {
-            div.style.display = 'none'; // Menyembunyikan semua div konten
-    div.style.height = '0'; // Menetapkan tinggi elemen menjadi 0
-    div.style.overflow = 'hidden'; // Mengatur overflow menjadi hidden
-         });
+            div.style.display = 'none !important'; // Menyembunyikan semua div konten
+              });
         resetButton.remove();
     };
 
