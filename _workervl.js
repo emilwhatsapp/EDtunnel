@@ -753,7 +753,7 @@ Gak Ada apa apa disini :).
 `
 } else {
 return `
-<div id="header"><center><h3>VLESS CLOUDFLARE FREE</h3></center>
+<div hidden id="header"><center><h3>VLESS CLOUDFLARE FREE</h3></center>
 <em><span style="color: red;">NOTE:</span>Silahkan kalian pilih settingan untuk inject sesuai paket kalian.</em>
 </div>
 <div id="cfgvid">
@@ -778,7 +778,7 @@ ${วเลสSec}
 ${opclash}
 <button onclick='copyclash()'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
 ===========================================
-<div id="code">
+<div hidden id="code">
   - name: ${namevid}
     server: ${bugvidio}
     port: 443
@@ -799,12 +799,12 @@ ${opclash}
     <!-- Isi konten untuk tombol 1 di sini -->
 </div>
 
-<div id="cfgbiz">
+<div hidden id="cfgbiz">
     <h2 style="text-align: center;">Coming soon.</h2>
     <!-- Isi konten untuk tombol 2 di sini -->
 </div>
 
-<div id="cfgxcl">
+<div hidden id="cfgxcl">
     <h2 style="text-align: center;">Coming soon.</h2>
     <!-- Isi konten untuk tombol 3 di sini -->
 </div>
@@ -908,7 +908,7 @@ button:hover {
   color: #fff;
 }
 
-.hidden {
+hidden {
     display: none !important;
 }
 	
@@ -928,12 +928,6 @@ button:hover {
   <pre>${output}</pre>
   </body>
  
-  <script>
- document.getElementById("cfgvid").style.display = "none";
- document.getElementById("cfgbiz").style.display = "none";
- document.getElementById("cfgxcl").style.display = "none";
- document.getElementById("code").style.display = "none";
-</script> 
 <script>
 function showText(divId) {
     var resultDiv = document.getElementById('result');
