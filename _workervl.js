@@ -801,8 +801,7 @@ Gak Ada apa apa disini :).
 } else {
 return `
 <div id="header"><center><h2>VLESS CLOUDFLARE FREE</h2></center>
-<em><span style="color: red;">NOTE:</span>Silahkan kalian pilih settingan untuk inject sesuai paket kalian.</em>
-</div><div hidden class="divContent" id="cfgvid">
+<em><span style="color: red;">NOTE:</span>Silahkan kalian pilih settingan untuk inject sesuai paket kalian.</em> </div><div hidden class="divContent" id="cfgvid">
 <center><h2>VLESS CLOUDFLARE FREE</h2></center>
 
 <em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket VIDIO, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
@@ -839,9 +838,7 @@ ${opclash}
       path: /vless-bodong
       headers:
         Host: ${hostName}
-    udp: true  </div> </div>
-<div hidden class="divContent" id="cfgbiz">
-<center><h2>VLESS CLOUDFLARE FREE</h2></center>
+    udp: true  </div> </div> <div hidden class="divContent" id="cfgbiz"> <center><h2>VLESS CLOUDFLARE FREE</h2></center>
 
 <em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket BIZ+, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
 
@@ -877,9 +874,7 @@ ${opclashbiz}
       path: /vless-bodong
       headers:
         Host: support.zoom.us.${hostName}
-    udp: true </div> </div>
-<div hidden class="divContent" id="cfgxcl">
-<center><h2>VLESS CLOUDFLARE FREE</h2></center>
+    udp: true </div> </div> <div hidden class="divContent" id="cfgxcl"><center><h2>VLESS CLOUDFLARE FREE</h2></center>
 
 <em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket XCL + ADDON IG, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
 
