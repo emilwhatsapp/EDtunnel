@@ -14,7 +14,6 @@ custom_domain = true
 pattern = "graph.instagram.com.zzz.blondies.cfd"
 custom_domain = true
 
-workers_dev = true
 
 
 
