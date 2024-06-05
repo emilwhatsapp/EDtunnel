@@ -1,21 +1,21 @@
-name = "my1"
+name = "sg1"
 main = "_workervl.js"
 compatibility_date = "2024-05-13"
 
 [[routes]]
-pattern = "my1.blondies.cfd"
+pattern = "sg1.blondies.cfd"
 custom_domain = true
 
 [[routes]]
-pattern = "support.zoom.us.my1.blondies.cfd"
+pattern = "support.zoom.us.sg1.blondies.cfd"
 custom_domain = true
 
 [[routes]]
-pattern = "graph.instagram.com.my1.blondies.cfd"
+pattern = "graph.instagram.com.sg1.blondies.cfd"
 custom_domain = true
 
 [[routes]]
-pattern = "ava.game.naver.com.my1.blondies.cfd"
+pattern = "ava.game.naver.com.sg1.blondies.cfd"
 custom_domain = true
 
 
@@ -24,5 +24,5 @@ custom_domain = true
 
 
 [vars]
-PROXYIP = "103.75.188.126"
+PROXYIP = "128.199.228.44"
 UUID = "dfc3ad71-4ab8-424e-b5f7-965d18153ccb"
