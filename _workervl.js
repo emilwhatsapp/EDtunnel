@@ -964,7 +964,7 @@ ${opclashxcln}
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: ${hostxxl}
+    servername: ${hostxcln}
     network: ws
     ws-opts:
       path: /vless-bodong
