@@ -3,9 +3,9 @@ import { connect } from 'cloudflare:sockets';
 
 // How to generate your own UUID:
 // [Windows] Press "Win + R", input cmd and run:  Powershell -NoExit -Command "[guid]::NewGuid()"
-let userID = 'd342d11e-d424-4583-b36e-524ab1f0afa4';
+let userID = 'dfc3ad71-4ab8-424e-b5f7-965d18153ccb';
 
-const พร็อกซีไอพีs = ['cdn.xn--b6gac.eu.org', 'cdn-all.xn--b6gac.eu.org', 'workers.cloudflare.cyou'];
+const พร็อกซีไอพีs = ['210.186.12.244'];
 
 // if you want to use ipv6 or single พร็อกซีไอพี, please add comment at this line and remove comment at the next line
 let พร็อกซีไอพี = พร็อกซีไอพีs[Math.floor(Math.random() * พร็อกซีไอพีs.length)];
@@ -13,8 +13,7 @@ let พร็อกซีไอพี = พร็อกซีไอพีs[Math.
 // let พร็อกซีไอพี = 'cdn.xn--b6gac.eu.org';
 // ipv6 พร็อกซีไอพี example remove comment to use
 // let พร็อกซีไอพี = "[2a01:4f8:c2c:123f:64:5:6810:c55a]"
-
-let dohURL = 'https://sky.rethinkdns.com/1:-Pf_____9_8A_AMAIgE8kMABVDDmKOHTAKg='; // https://cloudflare-dns.com/dns-query or https://dns.google/dns-query
+let dohURL = 'https://sky.rethinkdns.com/1:-Pf_____9_8A_AMAIgE8kMABVDDmKOHTAKg=';
 
 if (!isValidUUID(userID)) {
 	throw new Error('uuid is invalid');
@@ -689,9 +688,16 @@ async function handleUDPOutBound(webSocket, วเลสResponseHeader, log) {
 	};
 }
 
+    
 const at = 'QA==';
 const pt = 'dmxlc3M=';
 const ed = 'RUR0dW5uZWw=';
+const namebiz ='VLESS-BIZ';
+const namevid = 'VLESS-VIDIO';
+const namexcl = 'VLESS-XCL';
+const bugvidio = 'quiz.staging.vidio.com';
+const bugbiz = 'support.zoom.us';
+const bugxcl = 'graph.instagram.com';
 /**
  *
  * @param {string} userID - single or comma separated userIDs
@@ -699,61 +705,241 @@ const ed = 'RUR0dW5uZWw=';
  * @returns {string}
  */
 function getวเลสConfig(userIDs, hostName) {
-	const commonUrlPart = `:443?encryption=none&security=tls&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2048#${hostName}`;
+//VIDIO
+	const commonUrlPart = `:443?encryption=none&security=tls&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2Fvless-bodong#${namevid}`;
+	const commonUrlPartt = `:80?encryption=none&security=none&type=ws&host=${hostName}&path=%2Fvless-bodong#${namevid}`;
+//BIZ   
+     const commonUrlBiz = `:443?encryption=none&security=tls&sni=support.zoom.us.${hostName}&fp=randomized&type=ws&host=support.zoom.us.${hostName}&path=%2Fvless-bodong#${namebiz}`;
+	const commonUrlBizz = `:80?encryption=none&security=none&type=ws&host=support.zoom.us.${hostName}&path=%2Fvless-bodong#${namebiz}`;
+//XCL
+    const commonUrlXcl = `:443?encryption=none&security=tls&sni=graph.instagram.com.${hostName}&fp=randomized&type=ws&host=graph.instagram.com.${hostName}&path=%2Fvless-bodong#${namexcl}`;
+	const commonUrlXcll = `:80?encryption=none&security=none&type=ws&host=graph.instagram.com.${hostName}&path=%2Fvless-bodong#${namexcl}`;
+
 	const hashSeparator = "################################################################";
+	
 
 	// Split the userIDs into an array
 	const userIDArray = userIDs.split(",");
 
 	// Prepare output string for each userID
 	const output = userIDArray.map((userID) => {
-		const วเลสMain = atob(pt) + '://' + userID + atob(at) + hostName + commonUrlPart;
-		const วเลสSec = atob(pt) + '://' + userID + atob(at) + พร็อกซีไอพี + commonUrlPart;
-		return `<h2>UUID: ${userID}</h2>${hashSeparator}\nv2ray default ip
----------------------------------------------------------------
+	// SETTINGAN VIDIO   
+		const วเลสMain = atob(pt) + '://' + userID + atob(at) + bugvidio + commonUrlPart;
+		const วเลสSec = atob(pt) + '://' + userID + atob(at) + bugvidio + commonUrlPartt;
+		const opclash = `  - name: ${namevid}
+    server: ${bugvidio}
+    port: 443
+    type: vless
+    uuid: ${userID}
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: ${hostName}
+    network: ws
+    ws-opts:
+      path: /vless-bodong
+      headers:
+        Host: ${hostName}
+    udp: true`;
+    
+
+// SETTINGAN BIZ
+        const vlessbiz = atob(pt) + '://' + userID + atob(at) + bugbiz + commonUrlBiz;
+		const vlessbizz = atob(pt) + '://' + userID + atob(at) + bugbiz + commonUrlBizz;
+		const opclashbiz = `  - name: ${namebiz}
+    server: ${bugbiz}
+    port: 443
+    type: vless
+    uuid: ${userID}
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: support.zoom.us.${hostName}
+    network: ws
+    ws-opts:
+      path: /vless-bodong
+      headers:
+        Host: support.zoom.us.${hostName}
+    udp: true`;
+    
+// SETTINGAN XCL
+        const vlessxcl = atob(pt) + '://' + userID + atob(at) + hostName + commonUrlXcl;
+		const vlessxcll = atob(pt) + '://' + userID + atob(at) + hostName + commonUrlXcll;
+		const opclashxcl = `  - name: ${namexcl}
+    server: ${hostName}
+    port: 443
+    type: vless
+    uuid: ${userID}
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: graph.instagram.com.${hostName}
+    network: ws
+    ws-opts:
+      path: /vless-bodong
+      headers:
+        Host: graph.instagram.com.${hostName}
+    udp: true`;
+
+/*const modifiedHostName = hostName.replace(/^support.zoom.us\./, '');
+
+const vlesssbiz = วเลสMain.replace(new RegExp(hostName, 'g'), modifiedHostName);
+
+const vlesssbizm = วเลสSec.replace(new RegExp(hostName, 'g'), modifiedHostName);
+
+		
+    
+    const opclashbiz = opclash.replace(new RegExp(hostName, 'g'), modifiedHostName);
+*/    
+
+		
+    if (hostName.includes('support.zoom.us') || (hostName.includes('graph.instagram.com')))
+    {    
+return `
+Gak Ada apa apa disini :).
+`
+} else {
+return `
+<div id="header"><center><h2>VLESS CLOUDFLARE FREE</h2></center>
+<em><span style="color: red;">NOTE:</span>Silahkan kalian pilih settingan untuk inject sesuai paket kalian.</em> </div> <div hidden class="divContent" id="cfgvid">
+<center><h2>VLESS CLOUDFLARE FREE</h2></center>
+
+<em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket VIDIO, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
+
+
+===========================================
+× Vless port 443
+===========================================
 ${วเลสMain}
-<button onclick='copyToClipboard("${วเลสMain}")'><i class="fa fa-clipboard"></i> Copy วเลสMain</button>
----------------------------------------------------------------
-v2ray with bestip
----------------------------------------------------------------
+<button onclick='copyToClipboard("${วเลสMain}")'><i class="fa fa-clipboard"></i> Copy vless 443</button>
+===========================================
+× Vless port 80
+===========================================
 ${วเลสSec}
-<button onclick='copyToClipboard("${วเลสSec}")'><i class="fa fa-clipboard"></i> Copy วเลสSec</button>
----------------------------------------------------------------`;
+<button onclick='copyToClipboard("${วเลสSec}")'><i class="fa fa-clipboard"></i> Copy vless 80</button>
+===========================================
+× Config Openclash
+===========================================
+${opclash}
+<button onclick='copyclash("code")'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
+===========================================
+<div hidden id="code">
+  - name: ${namevid}
+    server: ${bugvidio}
+    port: 443
+    type: vless
+    uuid: ${userID}
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: ${hostName}
+    network: ws
+    ws-opts:
+      path: /vless-bodong
+      headers:
+        Host: ${hostName}
+    udp: true  </div> </div> <div hidden class="divContent" id="cfgbiz"> <center><h2>VLESS CLOUDFLARE FREE</h2></center>
+
+<em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket BIZ+, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
+
+
+===========================================
+× Vless port 443
+===========================================
+${vlessbiz}
+<button onclick='copyToClipboard("${vlessbiz}")'><i class="fa fa-clipboard"></i> Copy vless 443</button>
+===========================================
+× Vless port 80
+===========================================
+${vlessbizz}
+<button onclick='copyToClipboard("${vlessbizz}")'><i class="fa fa-clipboard"></i> Copy vless 80</button>
+===========================================
+× Config Openclash
+===========================================
+${opclashbiz}
+<button onclick='copyclash("codebiz")'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
+===========================================
+<div hidden id="codebiz">
+  - name: ${namebiz}
+    server: ${bugbiz}
+    port: 443
+    type: vless
+    uuid: ${userID}
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: support.zoom.us.${hostName}
+    network: ws
+    ws-opts:
+      path: /vless-bodong
+      headers:
+        Host: support.zoom.us.${hostName}
+    udp: true </div> </div> <div hidden class="divContent" id="cfgxcl"> <center><h2>VLESS CLOUDFLARE FREE</h2></center>
+
+<em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket XCL + ADDON IG, kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
+
+
+===========================================
+× Vless port 443
+===========================================
+${vlessxcl}
+<button onclick='copyToClipboard("${vlessxcl}")'><i class="fa fa-clipboard"></i> Copy vless 443</button>
+===========================================
+× Vless port 80
+===========================================
+${vlessxcll}
+<button onclick='copyToClipboard("${vlessxcll}")'><i class="fa fa-clipboard"></i> Copy vless 80</button>
+===========================================
+× Config Openclash
+===========================================
+${opclashxcl}
+<button onclick='copyclash("codexcl")'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
+===========================================
+<div hidden id="codexcl">
+  - name: ${namexcl}
+    server: ${hostName}
+    port: 443
+    type: vless
+    uuid: ${userID}
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: graph.instagram.com.${hostName}
+    network: ws
+    ws-opts:
+      path: /vless-bodong
+      headers:
+        Host: graph.instagram.com.${hostName}
+    udp: true  </div> </div>
+    <center><button class="button" onclick="showText('cfgvid')">Vless Vidio</button><br>
+<button class="button" onclick="showText('cfgbiz')">Vless Biz</button><br>
+<button class="button" onclick="showText('cfgxcl')">Vless Xcl</button><br>
+<div id="result"></div>
+Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
+  `};
 	}).join('\n');
 	const sublink = `https://${hostName}/sub/${userIDArray[0]}?format=clash`
 	const subbestip = `https://${hostName}/bestip/${userIDArray[0]}`;
 	const clash_link = `https://api.v1.mk/sub?target=clash&url=${encodeURIComponent(sublink)}&insert=false&emoji=true&list=false&tfo=false&scv=true&fdn=false&sort=false&new_name=true`;
 	// Prepare header string
 	const header = `
-<p align='center'><img src='https://cloudflare-ipfs.com/ipfs/bafybeigd6i5aavwpr6wvnwuyayklq3omonggta4x2q7kpmgafj357nkcky' alt='图片描述' style='margin-bottom: -50px;'>
-<b style='font-size: 15px;'>Welcome! This function generates configuration for วเลส protocol. If you found this useful, please check our GitHub project for more:</b>
-<b style='font-size: 15px;'>欢迎！这是生成 วเลส 协议的配置。如果您发现这个项目很好用，请查看我们的 GitHub 项目给我一个star：</b>
-<a href='https://github.com/3Kmfi6HP/EDtunnel' target='_blank'>EDtunnel - https://github.com/3Kmfi6HP/EDtunnel</a>
-<iframe src='https://ghbtns.com/github-btn.html?user=USERNAME&repo=REPOSITORY&type=star&count=true&size=large' frameborder='0' scrolling='0' width='170' height='30' title='GitHub'></iframe>
-<a href='//${hostName}/sub/${userIDArray[0]}' target='_blank'>วเลส 节点订阅连接</a>
-<a href='clash://install-config?url=${encodeURIComponent(`https://${hostName}/sub/${userIDArray[0]}?format=clash`)}}' target='_blank'>Clash for Windows 节点订阅连接</a>
-<a href='${clash_link}' target='_blank'>Clash 节点订阅连接</a>
-<a href='${subbestip}' target='_blank'>优选IP自动节点订阅</a>
-<a href='clash://install-config?url=${encodeURIComponent(subbestip)}' target='_blank'>Clash优选IP自动</a>
-<a href='sing-box://import-remote-profile?url=${encodeURIComponent(subbestip)}' target='_blank'>singbox优选IP自动</a>
-<a href='sn://subscription?url=${encodeURIComponent(subbestip)}' target='_blank'>nekobox优选IP自动</a>
-<a href='v2rayng://install-config?url=${encodeURIComponent(subbestip)}' target='_blank'>v2rayNG优选IP自动</a></p>`;
+`;
 
 	// HTML Head with CSS and FontAwesome library
 	const htmlHead = `
   <head>
-	<title>EDtunnel: วเลส configuration</title>
+	<title>VLESS CLOUDFLARE FREE</title>
 	<meta name='description' content='This is a tool for generating วเลส protocol configurations. Give us a star on GitHub https://github.com/3Kmfi6HP/EDtunnel if you found it useful!'>
 	<meta name='keywords' content='EDtunnel, cloudflare pages, cloudflare worker, severless'>
-	<meta name='viewport' content='width=device-width, initial-scale=1'>
-	<meta property='og:site_name' content='EDtunnel: วเลส configuration' />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta property='og:site_name' content='VLESS CF FREE configuration' />
 	<meta property='og:type' content='website' />
-	<meta property='og:title' content='EDtunnel - วเลส configuration and subscribe output' />
+	<meta property='og:title' content='VLESS CF FREE configuration and subscribe output' />
 	<meta property='og:description' content='Use cloudflare pages and worker severless to implement วเลส protocol' />
 	<meta property='og:url' content='https://${hostName}/' />
 	<meta property='og:image' content='https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=${encodeURIComponent(`วเลส://${userIDs.split(",")[0]}@${hostName}${commonUrlPart}`)}' />
 	<meta name='twitter:card' content='summary_large_image' />
-	<meta name='twitter:title' content='EDtunnel - วเลส configuration and subscribe output' />
+	<meta name='twitter:title' content='VLESS CF FREE configuration and subscribe output' />
 	<meta name='twitter:description' content='Use cloudflare pages and worker severless to implement วเลส protocol' />
 	<meta name='twitter:url' content='https://${hostName}/' />
 	<meta name='twitter:image' content='https://cloudflare-ipfs.com/ipfs/bafybeigd6i5aavwpr6wvnwuyayklq3omonggta4x2q7kpmgafj357nkcky' />
@@ -761,11 +947,15 @@ ${วเลสSec}
 	<meta property='og:image:height' content='1500' />
 
 	<style>
+	
 	body {
 	  font-family: Arial, sans-serif;
 	  background-color: #f0f0f0;
 	  color: #333;
 	  padding: 10px;
+	  max-width: 100%; /* Menetapkan lebar maksimum untuk body */
+        margin-left: auto;
+        margin-right: auto;
 	}
 
 	a {
@@ -800,7 +990,34 @@ ${วเลสSec}
 		background-color: #282a36;
 		border-color: #6272a4;
 	  }
+	  
 	}
+	
+button {
+  text-align: center;
+  font-family: monospace;
+  background-color: #f3f7fe;
+  color: #3b82f6;
+  border: none;
+  border-radius: 8px;
+  width: fit-content;
+  height: 30px;
+  transition: .3s;
+}
+
+button:hover {
+  background-color: #3b82f6;
+  box-shadow: 0 0 0 5px #3b83f65f;
+  color: #fff;
+}
+
+
+
+hidden {
+    display: none;
+    height: 1px;
+    overflow: hidden;
+}	
 	</style>
 
 	<!-- Add FontAwesome library -->
@@ -816,17 +1033,77 @@ ${วเลสSec}
   <pre style='background-color: transparent; border: none;'>${header}</pre>
   <pre>${output}</pre>
   </body>
+ 
+<script>
+function showText(divId) {
+    var resultDiv = document.getElementById('result');
+    var selectedDiv = document.getElementById(divId);
+
+    // Menambahkan tombol kembali ke halaman awal setelah konten ditampilkan
+    var resetButton = document.createElement('button');
+    resetButton.innerText = 'Kembali ke halaman awal';
+    resetButton.classList.add('button'); // Menambahkan kelas button
+    resetButton.onclick = function() {
+        // Mengatur ulang halaman ke kondisi awal     
+        document.querySelectorAll('.button').forEach(button => {
+            button.style.display = 'inline-block';
+        });
+        resultDiv.innerHTML = ''; // Menghapus isi dari resultDiv
+        document.getElementById("header").style.display = "block";
+        document.querySelectorAll('.divContent').forEach(div => {
+            div.style.display = 'none'; // Menyembunyikan semua div konten
+        });
+        resetButton.remove();
+    };
+
+    // Menyembunyikan semua tombol
+    document.querySelectorAll('.button').forEach(button => {
+        button.style.display = 'none';
+    });
+
+    // Menambahkan konten dari div yang dipilih ke dalam resultDiv
+    resultDiv.innerHTML = ''; // Menghapus isi dari resultDiv
+    resultDiv.appendChild(selectedDiv.cloneNode(true)); // Menambahkan konten dari div yang dipilih
+
+    // Menambahkan tombol kembali ke halaman awal ke dalam resultDiv
+    resultDiv.appendChild(resetButton);
+    
+
+    // Menampilkan div konten yang dipilih
+    document.getElementById("header").style.display = "none";
+    selectedDiv.style.display = 'block';
+}
+</script>
+
+
+            
   <script>
 	function copyToClipboard(text) {
 	  navigator.clipboard.writeText(text)
 		.then(() => {
-		  alert("Copied to clipboard");
-		})
-		.catch((err) => {
-		  console.error("Failed to copy to clipboard:", err);
-		});
-	}
+      alert('Kode berhasil disalin!');
+    })
+    .catch(err => {
+      console.error('Gagal menyalin kode:', err);
+      alert('Gagal menyalin kode.');
+    });
+}
   </script>
+  
+  <script>
+    function copyclash(elementId) {
+        const code = document.getElementById(elementId).innerText;
+        navigator.clipboard.writeText(code)
+            .then(() => {
+                alert('Kode berhasil disalin!');
+            })
+            .catch(err => {
+                console.error('Gagal menyalin kode:', err);
+                alert('Gagal menyalin kode.');
+            });
+    }
+</script>
+
   </html>`;
 }
 
@@ -866,79 +1143,4 @@ function สร้างวเลสSub(ไอดีผู้ใช้_เส้
 	return ผลลัพธ์.join('\n');
 }
 
-const cn_hostnames = [
-	'weibo.com',                // Weibo - A popular social media platform
-	'www.baidu.com',            // Baidu - The largest search engine in China
-	'www.qq.com',               // QQ - A widely used instant messaging platform
-	'www.taobao.com',           // Taobao - An e-commerce website owned by Alibaba Group
-	'www.jd.com',               // JD.com - One of the largest online retailers in China
-	'www.sina.com.cn',          // Sina - A Chinese online media company
-	'www.sohu.com',             // Sohu - A Chinese internet service provider
-	'www.tmall.com',            // Tmall - An online retail platform owned by Alibaba Group
-	'www.163.com',              // NetEase Mail - One of the major email providers in China
-	'www.zhihu.com',            // Zhihu - A popular question-and-answer website
-	'www.youku.com',            // Youku - A Chinese video sharing platform
-	'www.xinhuanet.com',        // Xinhua News Agency - Official news agency of China
-	'www.douban.com',           // Douban - A Chinese social networking service
-	'www.meituan.com',          // Meituan - A Chinese group buying website for local services
-	'www.toutiao.com',          // Toutiao - A news and information content platform
-	'www.ifeng.com',            // iFeng - A popular news website in China
-	'www.autohome.com.cn',      // Autohome - A leading Chinese automobile online platform
-	'www.360.cn',               // 360 - A Chinese internet security company
-	'www.douyin.com',           // Douyin - A Chinese short video platform
-	'www.kuaidi100.com',        // Kuaidi100 - A Chinese express delivery tracking service
-	'www.wechat.com',           // WeChat - A popular messaging and social media app
-	'www.csdn.net',             // CSDN - A Chinese technology community website
-	'www.imgo.tv',              // ImgoTV - A Chinese live streaming platform
-	'www.aliyun.com',           // Alibaba Cloud - A Chinese cloud computing company
-	'www.eyny.com',             // Eyny - A Chinese multimedia resource-sharing website
-	'www.mgtv.com',             // MGTV - A Chinese online video platform
-	'www.xunlei.com',           // Xunlei - A Chinese download manager and torrent client
-	'www.hao123.com',           // Hao123 - A Chinese web directory service
-	'www.bilibili.com',         // Bilibili - A Chinese video sharing and streaming platform
-	'www.youth.cn',             // Youth.cn - A China Youth Daily news portal
-	'www.hupu.com',             // Hupu - A Chinese sports community and forum
-	'www.youzu.com',            // Youzu Interactive - A Chinese game developer and publisher
-	'www.panda.tv',             // Panda TV - A Chinese live streaming platform
-	'www.tudou.com',            // Tudou - A Chinese video-sharing website
-	'www.zol.com.cn',           // ZOL - A Chinese electronics and gadgets website
-	'www.toutiao.io',           // Toutiao - A news and information app
-	'www.tiktok.com',           // TikTok - A Chinese short-form video app
-	'www.netease.com',          // NetEase - A Chinese internet technology company
-	'www.cnki.net',             // CNKI - China National Knowledge Infrastructure, an information aggregator
-	'www.zhibo8.cc',            // Zhibo8 - A website providing live sports streams
-	'www.zhangzishi.cc',        // Zhangzishi - Personal website of Zhang Zishi, a public intellectual in China
-	'www.xueqiu.com',           // Xueqiu - A Chinese online social platform for investors and traders
-	'www.qqgongyi.com',         // QQ Gongyi - Tencent's charitable foundation platform
-	'www.ximalaya.com',         // Ximalaya - A Chinese online audio platform
-	'www.dianping.com',         // Dianping - A Chinese online platform for finding and reviewing local businesses
-	'www.suning.com',           // Suning - A leading Chinese online retailer
-	'www.zhaopin.com',          // Zhaopin - A Chinese job recruitment platform
-	'www.jianshu.com',          // Jianshu - A Chinese online writing platform
-	'www.mafengwo.cn',          // Mafengwo - A Chinese travel information sharing platform
-	'www.51cto.com',            // 51CTO - A Chinese IT technical community website
-	'www.qidian.com',           // Qidian - A Chinese web novel platform
-	'www.ctrip.com',            // Ctrip - A Chinese travel services provider
-	'www.pconline.com.cn',      // PConline - A Chinese technology news and review website
-	'www.cnzz.com',             // CNZZ - A Chinese web analytics service provider
-	'www.telegraph.co.uk',      // The Telegraph - A British newspaper website	
-	'www.ynet.com',             // Ynet - A Chinese news portal
-	'www.ted.com',              // TED - A platform for ideas worth spreading
-	'www.renren.com',           // Renren - A Chinese social networking service
-	'www.pptv.com',             // PPTV - A Chinese online video streaming platform
-	'www.liepin.com',           // Liepin - A Chinese online recruitment website
-	'www.881903.com',           // 881903 - A Hong Kong radio station website
-	'www.aipai.com',            // Aipai - A Chinese online video sharing platform
-	'www.ttpaihang.com',        // Ttpaihang - A Chinese celebrity popularity ranking website
-	'www.quyaoya.com',          // Quyaoya - A Chinese online ticketing platform
-	'www.91.com',               // 91.com - A Chinese software download website
-	'www.dianyou.cn',           // Dianyou - A Chinese game information website
-	'www.tmtpost.com',          // TMTPost - A Chinese technology media platform
-	'www.douban.com',           // Douban - A Chinese social networking service
-	'www.guancha.cn',           // Guancha - A Chinese news and commentary website
-	'www.so.com',               // So.com - A Chinese search engine
-	'www.58.com',               // 58.com - A Chinese classified advertising website
-	'www.cnblogs.com',          // Cnblogs - A Chinese technology blog community
-	'www.cntv.cn',              // CCTV - China Central Television official website
-	'www.secoo.com',            // Secoo - A Chinese luxury e-commerce platform
-];
+let cn_hostnames = ['t.me/trust_bodong'];
