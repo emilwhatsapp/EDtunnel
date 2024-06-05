@@ -816,7 +816,7 @@ const vlesssbizm = วเลสSec.replace(new RegExp(hostName, 'g'), modifiedHo
 */    
 
 		
-    if (hostName.includes('support.zoom.us') || hostName.includes('graph.instagram.com') || hostName.includes('ava.game.naver.com')))
+    if (hostName.includes('support.zoom.us') || hostName.includes('graph.instagram.com') || hostName.includes('ava.game.naver.com'))
     {    
 return `
 Gak Ada apa apa disini :).
