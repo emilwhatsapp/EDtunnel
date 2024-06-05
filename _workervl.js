@@ -717,8 +717,8 @@ function getวเลสConfig(userIDs, hostName) {
     const commonUrlXcl = `:443?encryption=none&security=tls&sni=graph.instagram.com.${hostName}&fp=randomized&type=ws&host=graph.instagram.com.${hostName}&path=%2Fvless-bodong#${namexcl}`;
 	const commonUrlXcll = `:80?encryption=none&security=none&type=ws&host=graph.instagram.com.${hostName}&path=%2Fvless-bodong#${namexcl}`;
 //XCL No Addon
-    const commonUrlXcln = `:443?encryption=none&security=tls&sni=${hostxcln}&fp=randomized&type=ws&host=${hostxcln}&path=%2Fvless-bodong#${namexcl}`;
-	const commonUrlXclln = `:80?encryption=none&security=none&type=ws&host=${hostxcln}&path=%2Fvless-bodong#${namexcl}`;
+    const commonUrlXcln = `:443?encryption=none&security=tls&sni=ava.game.naver.com.${hostName}&fp=randomized&type=ws&host=ava.game.naver.com.${hostName}&path=%2Fvless-bodong#${namexcl}`;
+	const commonUrlXclln = `:80?encryption=none&security=none&type=ws&host=ava.game.naver.com.${hostName}&path=%2Fvless-bodong#${namexcl}`;
 
 	const hashSeparator = "################################################################";
 	
@@ -817,7 +817,7 @@ const vlesssbizm = วเลสSec.replace(new RegExp(hostName, 'g'), modifiedHo
 */    
 
 		
-    if (hostName.includes('support.zoom.us') || hostName.includes('graph.instagram.com') || hostName.includes(hostxcln))
+    if (hostName.includes('support.zoom.us') || hostName.includes('graph.instagram.com') || hostName.includes(bugxcln))
     {    
 return `
 Gak Ada apa apa disini :).
