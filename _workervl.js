@@ -699,6 +699,7 @@ const bugvidio = 'quiz.staging.vidio.com';
 const bugbiz = 'support.zoom.us';
 const bugxcl = 'graph.instagram.com';
 const bugxcln = 'ava.game.naver.com';
+const hostxcln = `ava.game.naver.com.${hostName}`;
 /**
  *
  * @param {string} userID - single or comma separated userIDs
@@ -716,8 +717,8 @@ function getวเลสConfig(userIDs, hostName) {
     const commonUrlXcl = `:443?encryption=none&security=tls&sni=graph.instagram.com.${hostName}&fp=randomized&type=ws&host=graph.instagram.com.${hostName}&path=%2Fvless-bodong#${namexcl}`;
 	const commonUrlXcll = `:80?encryption=none&security=none&type=ws&host=graph.instagram.com.${hostName}&path=%2Fvless-bodong#${namexcl}`;
 //XCL No Addon
-    const commonUrlXcln = `:443?encryption=none&security=tls&sni=ava.game.naver.com.${hostName}&fp=randomized&type=ws&host=ava.game.naver.com.${hostName}&path=%2Fvless-bodong#${namexcl}`;
-	const commonUrlXclln = `:80?encryption=none&security=none&type=ws&host=ava.game.naver.com.${hostName}&path=%2Fvless-bodong#${namexcl}`;
+    const commonUrlXcln = `:443?encryption=none&security=tls&sni=${hostxcln}&fp=randomized&type=ws&host=${hostxcln}&path=%2Fvless-bodong#${namexcl}`;
+	const commonUrlXclln = `:80?encryption=none&security=none&type=ws&host=${hostxcln}&path=%2Fvless-bodong#${namexcl}`;
 
 	const hashSeparator = "################################################################";
 	
@@ -787,8 +788,8 @@ function getวเลสConfig(userIDs, hostName) {
     
     
 // SETTINGAN XCL No Addon
-        const vlessxcln = atob(pt) + '://' + userID + atob(at) + bugxcln + commonUrlXcl;
-		const vlessxclln = atob(pt) + '://' + userID + atob(at) + bugxcln + commonUrlXcll;
+        const vlessxcln = atob(pt) + '://' + userID + atob(at) + bugxcln + commonUrlXcln;
+		const vlessxclln = atob(pt) + '://' + userID + atob(at) + bugxcln + commonUrlXclln;
 		const opclashxcln = `  - name: ${namexcl}
     server: ${bugxcln}
     port: 443
@@ -797,12 +798,12 @@ function getวเลสConfig(userIDs, hostName) {
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: ava.game.naver.com.${hostName}
+    servername: ${hostxcln}
     network: ws
     ws-opts:
       path: /vless-bodong
       headers:
-        Host: ava.game.naver.com.${hostName}
+        Host: ${hostxcln}
     udp: true`;
 /*const modifiedHostName = hostName.replace(/^support.zoom.us\./, '');
 
@@ -816,7 +817,7 @@ const vlesssbizm = วเลสSec.replace(new RegExp(hostName, 'g'), modifiedHo
 */    
 
 		
-    if (hostName.includes('support.zoom.us') || hostName.includes('graph.instagram.com') || hostName.includes('ava.game.naver.com'))
+    if (hostName.includes('support.zoom.us') || hostName.includes('graph.instagram.com') || hostName.includes(hostxcln))
     {    
 return `
 Gak Ada apa apa disini :).
@@ -963,12 +964,12 @@ ${opclashxcln}
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: ava.game.naver.com.${hostName}
+    servername: ${hostxxl}
     network: ws
     ws-opts:
       path: /vless-bodong
       headers:
-        Host: ava.game.naver.com.${hostName}
+        Host: ${hostxcln}
     udp: true  </div> </div>
     <center><button class="button" onclick="showText('cfgvid')">Vless Vidio</button><br>
 <button class="button" onclick="showText('cfgbiz')">Vless Biz</button><br>
