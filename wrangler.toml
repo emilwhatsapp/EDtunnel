@@ -1,17 +1,17 @@
-name = "tes"
+name = "my1"
 main = "_workervl.js"
 compatibility_date = "2023-05-26"
 
 [[routes]]
-pattern = "tes.blondies.cfd"
+pattern = "my1.blondies.cfd"
 custom_domain = true
 
 [[routes]]
-pattern = "support.zoom.us.tes.blondies.cfd"
+pattern = "support.zoom.us.my1.blondies.cfd"
 custom_domain = true
 
 [[routes]]
-pattern = "graph.instagram.com.tes.blondies.cfd"
+pattern = "graph.instagram.com.my1.blondies.cfd"
 custom_domain = true
 
 
@@ -19,6 +19,6 @@ custom_domain = true
 
 
 [vars]
-PROXYIP = "128.199.228.44"
+PROXYIP = "103.75.188.126"
 UUID = "dfc3ad71-4ab8-424e-b5f7-965d18153ccb"
 DNS_RESOLVER_URL = "https://dns.google.com/dns-query"
