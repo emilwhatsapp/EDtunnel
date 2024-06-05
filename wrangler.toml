@@ -3,7 +3,7 @@ main = "_workervl.js"
 compatibility_date = "2024-05-13"
 
 [[routes]]
-pattern = "sg1.blondies.cfd"
+pattern = "my1.blondies.cfd"
 custom_domain = true
 
 [[routes]]
